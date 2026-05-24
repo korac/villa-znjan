@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Villa Žnjan — Apartments am Meer in Split",
+    "description": "Fünf moderne Apartments in Žnjan, Split — nur wenige Schritte vom Strand. Buchen Sie Ihren Adria-Urlaub direkt beim Eigentümer."
+  },
+  "nav": {
+    "home": "Startseite",
+    "apartments": "Apartments",
+    "gallery": "Galerie",
+    "location": "Lage",
+    "contact": "Kontakt",
+    "bookNow": "Jetzt buchen"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Žnjan · Split · Kroatien",
+      "title": "Ihr Zuhause an der Adria",
+      "subtitle": "Fünf moderne Apartments nur einen kurzen Spaziergang vom Strand Žnjan entfernt. Meerblick, sonnige Terrassen und die Altstadt nur Minuten entfernt.",
+      "cta": "Apartments entdecken",
+      "ctaSecondary": "Kontakt aufnehmen"
+    },
+    "intro": {
+      "heading": "Ein entspannter Ausgangspunkt für Ihren Split-Urlaub",
+      "body": "Die Villa Žnjan liegt in einem der begehrtesten Stadtviertel Splits am Meer. Ob als Paar oder mit der Familie — jedes Apartment ist auf Komfort ausgelegt: voll ausgestattete Küchen, Klimaanlage, schnelles WLAN und privater Außenbereich."
+    },
+    "units": {
+      "heading": "Unsere Apartments",
+      "subheading": "Fünf unterschiedliche Einheiten, jede mit eigenem Charakter.",
+      "viewDetails": "Details ansehen",
+      "guests": "{count, plural, one {# Gast} other {# Gäste}}"
+    },
+    "location": {
+      "heading": "Die Umgebung",
+      "body": "Žnjan verbindet einfachen Strandzugang mit ruhigem Wohnambiente. Der Diokletianpalast ist 10 Minuten entfernt, Cafés und Restaurants sind in der Nähe, und Sie sind gut an Flughafen und Fährhafen angebunden."
+    },
+    "gallery": {
+      "heading": "Eindrücke der Villa Žnjan"
+    },
+    "contactCta": {
+      "heading": "Fragen? Kontaktieren Sie uns",
+      "subheading": "Senden Sie uns eine Nachricht und wir antworten persönlich — meist innerhalb weniger Stunden."
+    }
+  },
+  "apartment": {
+    "from": "Ab",
+    "perNight": "/ Nacht",
+    "guests": "{count, plural, one {# Gast} other {# Gäste}}",
+    "bedrooms": "{count, plural, one {# Schlafzimmer} other {# Schlafzimmer}}",
+    "bathrooms": "{count, plural, one {# Badezimmer} other {# Badezimmer}}",
+    "size": "{size} m²",
+    "amenitiesHeading": "Das bietet diese Unterkunft",
+    "overviewHeading": "Überblick",
+    "bookNow": "Verfügbarkeit prüfen",
+    "backToAll": "Alle Apartments",
+    "bookingComingSoon": "Die Online-Buchung ist bald verfügbar. Kontaktieren Sie uns in der Zwischenzeit, um Ihre Termine zu reservieren."
+  },
+  "amenities": {
+    "wifi": "Schnelles WLAN",
+    "airConditioning": "Klimaanlage",
+    "kitchen": "Ausgestattete Küche",
+    "seaView": "Meerblick",
+    "terrace": "Private Terrasse",
+    "balcony": "Balkon",
+    "parking": "Kostenlose Parkplätze",
+    "washingMachine": "Waschmaschine",
+    "tv": "Smart-TV",
+    "coffeeMachine": "Kaffeemaschine",
+    "dishwasher": "Geschirrspüler",
+    "elevator": "Aufzug",
+    "petsAllowed": "Haustiere erlaubt",
+    "crib": "Babybett"
+  },
+  "contact": {
+    "heading": "Kontaktieren Sie uns",
+    "subheading": "Wir helfen Ihnen gerne bei der Planung Ihres Aufenthalts.",
+    "name": "Ihr Name",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefon (optional)",
+    "message": "Nachricht",
+    "messagePlaceholder": "Nennen Sie uns Ihre Termine, die Anzahl der Gäste und alles, was Sie wissen möchten.",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "success": "Vielen Dank! Ihre Nachricht wurde gesendet — wir melden uns in Kürze.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine E-Mail.",
+    "required": "Dieses Feld ist erforderlich",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+  },
+  "footer": {
+    "tagline": "Apartments am Meer in Žnjan, Split.",
+    "quickLinks": "Schnelllinks",
+    "contactHeading": "Kontakt",
+    "address": "Žnjan, 21000 Split, Kroatien",
+    "rights": "Alle Rechte vorbehalten.",
+    "builtNote": "Direktbuchungen · Keine Plattformgebühren"
+  }
+}

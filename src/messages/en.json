@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Villa Žnjan — Apartments by the sea in Split",
+    "description": "Five modern apartments in Žnjan, Split — steps from the beach. Book your Adriatic getaway directly with the owners."
+  },
+  "nav": {
+    "home": "Home",
+    "apartments": "Apartments",
+    "gallery": "Gallery",
+    "location": "Location",
+    "contact": "Contact",
+    "bookNow": "Book now"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Žnjan · Split · Croatia",
+      "title": "Your home by the Adriatic",
+      "subtitle": "Five modern apartments a short stroll from Žnjan beach. Sea views, sunny terraces, and the old town just minutes away.",
+      "cta": "Explore apartments",
+      "ctaSecondary": "Get in touch"
+    },
+    "intro": {
+      "heading": "A relaxed base for your Split holiday",
+      "body": "Villa Žnjan sits in one of Split's most sought-after seaside neighbourhoods. Whether you're travelling as a couple or a family, each apartment is designed for comfort — fully equipped kitchens, air conditioning, fast Wi‑Fi, and private outdoor space."
+    },
+    "units": {
+      "heading": "Our apartments",
+      "subheading": "Five distinct units, each with its own character.",
+      "viewDetails": "View details",
+      "guests": "{count, plural, one {# guest} other {# guests}}"
+    },
+    "location": {
+      "heading": "The neighbourhood",
+      "body": "Žnjan combines easy beach access with a calm residential feel. You're 10 minutes from Diocletian's Palace, close to cafés and restaurants, and well connected to the airport and ferry port."
+    },
+    "gallery": {
+      "heading": "Glimpses of Villa Žnjan"
+    },
+    "contactCta": {
+      "heading": "Questions? Get in touch",
+      "subheading": "Send us a message and we'll reply personally — usually within a few hours."
+    }
+  },
+  "apartment": {
+    "from": "From",
+    "perNight": "/ night",
+    "guests": "{count, plural, one {# guest} other {# guests}}",
+    "bedrooms": "{count, plural, one {# bedroom} other {# bedrooms}}",
+    "bathrooms": "{count, plural, one {# bathroom} other {# bathrooms}}",
+    "size": "{size} m²",
+    "amenitiesHeading": "What this place offers",
+    "overviewHeading": "Overview",
+    "bookNow": "Check availability",
+    "backToAll": "All apartments",
+    "bookingComingSoon": "Online booking is coming soon. In the meantime, contact us to reserve your dates."
+  },
+  "amenities": {
+    "wifi": "Fast Wi‑Fi",
+    "airConditioning": "Air conditioning",
+    "kitchen": "Equipped kitchen",
+    "seaView": "Sea view",
+    "terrace": "Private terrace",
+    "balcony": "Balcony",
+    "parking": "Free parking",
+    "washingMachine": "Washing machine",
+    "tv": "Smart TV",
+    "coffeeMachine": "Coffee machine",
+    "dishwasher": "Dishwasher",
+    "elevator": "Elevator",
+    "petsAllowed": "Pets allowed",
+    "crib": "Baby crib"
+  },
+  "contact": {
+    "heading": "Contact us",
+    "subheading": "We'd love to help plan your stay.",
+    "name": "Your name",
+    "email": "Email address",
+    "phone": "Phone (optional)",
+    "message": "Message",
+    "messagePlaceholder": "Tell us your dates, how many guests, and anything you'd like to know.",
+    "send": "Send message",
+    "sending": "Sending…",
+    "success": "Thank you! Your message has been sent — we'll be in touch shortly.",
+    "error": "Something went wrong. Please try again or email us directly.",
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address"
+  },
+  "footer": {
+    "tagline": "Apartments by the sea in Žnjan, Split.",
+    "quickLinks": "Quick links",
+    "contactHeading": "Contact",
+    "address": "Žnjan, 21000 Split, Croatia",
+    "rights": "All rights reserved.",
+    "builtNote": "Direct bookings · No platform fees"
+  }
+}
