@@ -5,6 +5,7 @@ import { Photo } from "@/components/Photo";
 import { ApartmentCard } from "@/components/ApartmentCard";
 import { Hero } from "@/components/home/Hero";
 import { GallerySection } from "@/components/home/GallerySection";
+import { ContactSection } from "@/components/ContactSection";
 import { getApartmentsOrdered } from "@/content/apartments";
 import type { Locale } from "@/i18n/routing";
 
@@ -80,6 +81,9 @@ export default async function HomePage({
       </section>
 
       <GallerySection />
+
+      {/* Contact — sits directly before the footer */}
+      <ContactSection className="border-t border-border py-24" />
     </main>
   );
 }
