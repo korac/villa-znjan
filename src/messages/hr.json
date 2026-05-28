@@ -85,6 +85,15 @@
     "required": "Ovo polje je obavezno",
     "invalidEmail": "Unesite valjanu email adresu"
   },
+  "unlock": {
+    "eyebrow": "Privatna inačica",
+    "heading": "Dobrodošli u Villu Žnjan",
+    "description": "Stranica je u izradi. Unesite pristupnu lozinku za nastavak.",
+    "passwordLabel": "Lozinka",
+    "submit": "Nastavi",
+    "submitting": "Provjera…",
+    "error": "Pogrešna lozinka. Pokušajte ponovno."
+  },
   "footer": {
     "tagline": "Apartmani uz more na Žnjanu, Split.",
     "quickLinks": "Brze poveznice",

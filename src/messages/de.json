@@ -85,6 +85,15 @@
     "required": "Dieses Feld ist erforderlich",
     "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
   },
+  "unlock": {
+    "eyebrow": "Private Vorschau",
+    "heading": "Willkommen in der Villa Žnjan",
+    "description": "Die Seite befindet sich in der Entwicklung. Bitte geben Sie das Zugangspasswort ein, um fortzufahren.",
+    "passwordLabel": "Passwort",
+    "submit": "Weiter",
+    "submitting": "Wird geprüft…",
+    "error": "Falsches Passwort. Bitte erneut versuchen."
+  },
   "footer": {
     "tagline": "Apartments am Meer in Žnjan, Split.",
     "quickLinks": "Schnelllinks",
