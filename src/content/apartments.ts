@@ -70,7 +70,14 @@ export const apartments: Apartment[] = [
       "coffeeMachine",
       "washingMachine",
     ],
-    images: [],
+    images: [
+      "/apartments/lavanda/1.jpg",
+      "/apartments/lavanda/2.jpg",
+      "/apartments/lavanda/3.jpg",
+      "/apartments/lavanda/4.jpg",
+      "/apartments/lavanda/5.jpeg",
+      "/apartments/lavanda/6.jpeg",
+    ],
     content: {
       en: {
         name: "Lavanda",
@@ -95,10 +102,10 @@ export const apartments: Apartment[] = [
   {
     slug: "marina",
     order: 2,
-    maxGuests: 3,
-    bedrooms: 1,
+    maxGuests: 4,
+    bedrooms: 2,
     bathrooms: 1,
-    sizeM2: 48,
+    sizeM2: 63,
     basePriceEur: 160,
     amenities: [
       "wifi",
@@ -108,10 +115,18 @@ export const apartments: Apartment[] = [
       "balcony",
       "tv",
       "coffeeMachine",
-      "washingMachine",
-      "dishwasher",
     ],
-    images: [],
+    images: [
+      "/apartments/marina/1.jpg",
+      // "/apartments/marina/2.jpg",
+      "/apartments/marina/3.jpg",
+      // "/apartments/marina/4.jpg",
+      "/apartments/marina/5.jpg",
+      // "/apartments/marina/6.jpg",
+      "/apartments/marina/7.jpg",
+      // "/apartments/marina/8.jpg",
+      "/apartments/marina/9.jpg",
+    ],
     content: {
       en: {
         name: "Marina",
@@ -195,7 +210,15 @@ export const apartments: Apartment[] = [
       "parking",
       "crib",
     ],
-    images: [],
+    images: [
+      "/apartments/adriana/7.jpg",
+      "/apartments/adriana/5.jpg",
+      "/apartments/adriana/1.jpg",
+      // "/apartments/adriana/2.jpg",
+      "/apartments/adriana/3.jpg",
+      // "/apartments/adriana/4.jpg",
+      "/apartments/adriana/6.jpg",
+    ],
     content: {
       en: {
         name: "Adriana",
@@ -239,7 +262,13 @@ export const apartments: Apartment[] = [
       "elevator",
       "crib",
     ],
-    images: [],
+    images: [
+      "/apartments/jadran/1.JPG",
+      "/apartments/jadran/2.JPG",
+      "/apartments/jadran/3.JPG",
+      "/apartments/jadran/4.JPG",
+      "/apartments/jadran/5.JPG",
+    ],
     content: {
       en: {
         name: "Penthouse Jadran",
