@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
@@ -35,7 +36,9 @@ export default async function UnlockPage({
           <p className="mt-3 text-sm leading-relaxed text-muted">
             {t("description")}
           </p>
-          <UnlockForm />
+          <Suspense fallback={null}>
+            <UnlockForm />
+          </Suspense>
         </div>
       </Container>
     </main>
