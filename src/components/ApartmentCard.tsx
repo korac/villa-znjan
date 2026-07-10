@@ -1,22 +1,28 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Photo } from "@/components/Photo";
+import { cn } from "@/lib/cn";
 import type { Apartment } from "@/content/apartments";
 import type { Locale } from "@/i18n/routing";
 
 export function ApartmentCard({
   apartment,
   index = 0,
+  className,
 }: {
   apartment: Apartment;
   index?: number;
+  className?: string;
 }) {
   const locale = useLocale() as Locale;
   const t = useTranslations();
   const copy = apartment.content[locale];
 
   return (
-    <Link href={`/apartments/${apartment.slug}`} className="group block">
+    <Link
+      href={`/apartments/${apartment.slug}`}
+      className={cn("group block", className)}
+    >
       <div className="relative aspect-[4/3] overflow-hidden">
         <Photo
           src={apartment.images[0]}
@@ -30,7 +36,7 @@ export function ApartmentCard({
 
       <div className="pt-5">
         <div className="flex items-baseline justify-between gap-4">
-          <h3 className="font-serif text-2xl text-foreground transition-colors group-hover:text-highlight">
+          <h3 className="font-serif text-2xl font-semibold  text-foreground transition-colors group-hover:text-highlight">
             {copy.name}
           </h3>
           {/*<span className="whitespace-nowrap text-sm text-muted">*/}

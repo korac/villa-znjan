@@ -45,12 +45,14 @@ export default async function HomePage({
             title={t("units.heading")}
             subtitle={t("units.subheading")}
           />
-          <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Row 1: first two cards span 3/6 each; row 2: last three span 2/6 each. */}
+          <div className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-6">
             {apartments.map((apartment, i) => (
               <ApartmentCard
                 key={apartment.slug}
                 apartment={apartment}
                 index={i}
+                className={i < 2 ? "lg:col-span-3" : "lg:col-span-2"}
               />
             ))}
           </div>

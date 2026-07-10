@@ -11,7 +11,7 @@ export function Hero() {
     <section className="relative flex min-h-[88vh] items-center overflow-hidden">
       {/* Background photo (stone placeholder until a real hero image is added) */}
       <Photo
-        src="/hero3.jpg"
+        src="/hero4.jpg"
         alt={t("title")}
         index={0}
         priority
