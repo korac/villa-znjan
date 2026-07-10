@@ -60,6 +60,16 @@
   }
 }
 
+/* Hero carousel: active progress line fills across the slide's lifetime. */
+@keyframes heroProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 /* Utility: letter-spaced uppercase eyebrow/label, common in luxury layouts */
 @layer components {
   .eyebrow {
