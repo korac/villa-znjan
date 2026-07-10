@@ -31,11 +31,11 @@ export function ApartmentCard({
       <div className="pt-5">
         <div className="flex items-baseline justify-between gap-4">
           <h3 className="font-serif text-2xl text-foreground">{copy.name}</h3>
-          <span className="whitespace-nowrap text-sm text-muted">
-            {t("apartment.from")}{" "}
-            <span className="text-foreground">€{apartment.basePriceEur}</span>
-            {t("apartment.perNight")}
-          </span>
+          {/*<span className="whitespace-nowrap text-sm text-muted">*/}
+          {/*  {t("apartment.from")}{" "}*/}
+          {/*  <span className="text-foreground">€{apartment.basePriceEur}</span>*/}
+          {/*  {t("apartment.perNight")}*/}
+          {/*</span>*/}
         </div>
         <p className="mt-1 text-sm text-muted">{copy.tagline}</p>
         <p className="mt-3 text-xs uppercase tracking-[0.15em] text-muted">

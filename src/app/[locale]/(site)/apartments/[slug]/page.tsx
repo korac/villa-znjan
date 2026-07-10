@@ -119,12 +119,12 @@ export default async function ApartmentPage({
               <p className="text-sm text-muted">
                 {t("apartment.from")}
               </p>
-              <p className="mt-1 font-serif text-4xl">
-                €{apartment.basePriceEur}
-                <span className="ml-1 text-base text-muted">
-                  {t("apartment.perNight")}
-                </span>
-              </p>
+              {/*<p className="mt-1 font-serif text-4xl">*/}
+              {/*  €{apartment.basePriceEur}*/}
+              {/*  <span className="ml-1 text-base text-muted">*/}
+              {/*    {t("apartment.perNight")}*/}
+              {/*  </span>*/}
+              {/*</p>*/}
               <Link
                 href="/contact"
                 className={buttonClasses("primary", "mt-6 w-full")}

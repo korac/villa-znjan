@@ -104,7 +104,7 @@ export const apartments: Apartment[] = [
     bathrooms: 2,
     sizeM2: 114,
     outdoorSpaces: 1,
-    basePriceEur: 390,
+    basePriceEur: 0,
     amenities: [
       ...SHARED_AMENITIES,
       "balcony",
@@ -165,7 +165,7 @@ export const apartments: Apartment[] = [
     bathrooms: 1,
     sizeM2: 63,
     outdoorSpaces: 1,
-    basePriceEur: 160,
+    basePriceEur: 0,
     amenities: [
       ...SHARED_AMENITIES,
       "terrace",
@@ -230,7 +230,7 @@ export const apartments: Apartment[] = [
     bathrooms: 1,
     sizeM2: 21,
     outdoorSpaces: 0,
-    basePriceEur: 95,
+    basePriceEur: 0,
     amenities: [
       ...SHARED_AMENITIES,
       "seaView",
@@ -280,7 +280,7 @@ export const apartments: Apartment[] = [
     bathrooms: 1,
     sizeM2: 81,
     outdoorSpaces: 2,
-    basePriceEur: 210,
+    basePriceEur: 0,
     amenities: [
       ...SHARED_AMENITIES,
       "balcony",
@@ -344,7 +344,7 @@ export const apartments: Apartment[] = [
     bathrooms: 1,
     sizeM2: 58,
     outdoorSpaces: 1,
-    basePriceEur: 140,
+    basePriceEur: 0,
     amenities: [
       ...SHARED_AMENITIES,
       "terrace",
