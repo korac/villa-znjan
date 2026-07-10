@@ -163,7 +163,7 @@ export const apartments: Apartment[] = [
     maxGuests: 4,
     bedrooms: 1,
     bathrooms: 1,
-    sizeM2: 65,
+    sizeM2: 63,
     outdoorSpaces: 1,
     basePriceEur: 160,
     amenities: [
@@ -278,7 +278,7 @@ export const apartments: Apartment[] = [
     maxGuests: 4,
     bedrooms: 2,
     bathrooms: 1,
-    sizeM2: 34, // TBD per owner spec
+    sizeM2: 81,
     outdoorSpaces: 2,
     basePriceEur: 210,
     amenities: [
@@ -342,7 +342,7 @@ export const apartments: Apartment[] = [
     maxGuests: 3,
     bedrooms: 1,
     bathrooms: 1,
-    sizeM2: 34, // TBD per owner spec
+    sizeM2: 58,
     outdoorSpaces: 1,
     basePriceEur: 140,
     amenities: [
