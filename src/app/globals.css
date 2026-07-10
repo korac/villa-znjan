@@ -13,6 +13,7 @@
   --color-accent: #2f5d62; /* deep Adriatic teal */
   --color-accent-hover: #264a4e;
   --color-accent-foreground: #f7f3ec;
+  --color-highlight: #b0603f; /* warm terracotta — hover/interaction pop */
 
   /* Typography */
   --font-serif: var(--font-cormorant), ui-serif, Georgia, "Times New Roman",
