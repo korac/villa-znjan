@@ -22,7 +22,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/45 to-foreground/15" />
 
       <Container className="relative">
-        <div className="max-w-2xl py-24 text-background">
+        <div className="max-w-2xl py-24 text-background [text-shadow:0_2px_16px_rgb(0_0_0/0.75)]">
           <p className="text-xs uppercase tracking-[0.3em] text-background/80">
             {t("eyebrow")}
           </p>
