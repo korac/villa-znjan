@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/Container";
-import { Photo } from "@/components/Photo";
+import { ApartmentGallery } from "@/components/apartment/ApartmentGallery";
 import { buttonClasses } from "@/components/Button";
 import { routing, type Locale } from "@/i18n/routing";
 import { apartments, getApartment } from "@/content/apartments";
@@ -50,12 +50,6 @@ export default async function ApartmentPage({
     t("apartment.size", { size: apartment.sizeM2 }),
   ];
 
-  // Up to 4 gallery tiles (real images when present, otherwise placeholders).
-  const galleryTiles = Array.from(
-    { length: 4 },
-    (_, i) => apartment.images[i + 1],
-  );
-
   return (
     <main className="py-12 sm:py-16">
       <Container>
@@ -85,31 +79,11 @@ export default async function ApartmentPage({
 
       {/* Gallery */}
       <Container className="mt-10">
-        <div className="grid gap-3 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden lg:aspect-auto">
-            <Photo
-              src={apartment.images[0]}
-              alt={copy.name}
-              index={apartment.order}
-              priority
-              label={copy.name}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-            />
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            {galleryTiles.map((src, i) => (
-              <div key={i} className="relative aspect-[4/3] overflow-hidden">
-                <Photo
-                  src={src}
-                  alt={`${copy.name} ${i + 2}`}
-                  index={apartment.order + i + 1}
-                  label={copy.name}
-                  sizes="(min-width: 1024px) 25vw, 50vw"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <ApartmentGallery
+          images={apartment.images}
+          name={copy.name}
+          order={apartment.order}
+        />
       </Container>
 
       {/* Detail + booking */}
