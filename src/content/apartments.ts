@@ -125,7 +125,7 @@ export const apartments: Apartment[] = [
       "/apartments/maslina/0G7A1567.jpg",
       "/apartments/maslina/0G7A1588.jpg",
       "/apartments/maslina/0G7A1592.jpg",
-      "/apartments/maslina/5.jpeg",
+      "/apartments/maslina/5.jpg",
       "/apartments/maslina/0G7A1604.jpg",
       "/apartments/maslina/0G7A1607.jpg",
       "/apartments/maslina/0G7A1619.jpg",
@@ -389,14 +389,14 @@ export const apartments: Apartment[] = [
     ],
     images: [
       "/apartments/lavanda/0G7A1501.jpg",
-      "/apartments/lavanda/1.JPG",
+      "/apartments/lavanda/1.jpg",
       "/apartments/lavanda/0G7A1489.jpg",
-      "/apartments/lavanda/3.JPG",
+      "/apartments/lavanda/3.jpg",
       "/apartments/lavanda/BJ7A1474.jpg",
       "/apartments/lavanda/0G7A1502.jpg",
       "/apartments/lavanda/0G7A1513.jpg",
-      "/apartments/lavanda/4.JPG",
-      "/apartments/lavanda/5.JPG",
+      "/apartments/lavanda/4.jpg",
+      "/apartments/lavanda/5.jpg",
     ],
     content: {
       en: {
