@@ -268,7 +268,7 @@ export const apartments: Apartment[] = [
         name: "Oleandar",
         tagline: "Quiet hideaway above the archipelago",
         description:
-          "A private room with a spacious ensuite bathroom and a view over the Split archipelago. Carefully furnished in warm, natural tones — the perfect base for a couple's escape to the coast.",
+          "A private room with a spacious ensuite bathroom and a view over the Split archipelago. Carefully furnished in warm, natural tones - the perfect base for a couple's escape to the coast.",
         floor: "Top floor / attic",
         beds: "1 × Double",
         rooms: "No additional rooms",
@@ -277,7 +277,7 @@ export const apartments: Apartment[] = [
         name: "Oleandar",
         tagline: "Mirno utočište iznad arhipelaga",
         description:
-          "Privatna soba s prostranom ensuite kupaonicom te pogledom na splitski arhipelag. Pažljivo opremljena u toplim, prirodnim tonovima — savršena baza za bijeg dvoje na obalu.",
+          "Privatna soba s prostranom ensuite kupaonicom te pogledom na splitski arhipelag. Pažljivo opremljena u toplim, prirodnim tonovima - savršena baza za bijeg dvoje na obalu.",
         floor: "Treći kat / potkrovlje",
         beds: "1 × Double",
         rooms: "Nema dodatnih prostorija",
@@ -286,7 +286,7 @@ export const apartments: Apartment[] = [
         name: "Oleandar",
         tagline: "Ruhiger Rückzugsort über dem Archipel",
         description:
-          "Ein privates Zimmer mit geräumigem Ensuite-Bad und Blick auf den Splitter Archipel. Geschmackvoll in warmen, natürlichen Tönen eingerichtet — die perfekte Basis für eine Auszeit zu zweit an der Küste.",
+          "Ein privates Zimmer mit geräumigem Ensuite-Bad und Blick auf den Splitter Archipel. Geschmackvoll in warmen, natürlichen Tönen eingerichtet - die perfekte Basis für eine Auszeit zu zweit an der Küste.",
         floor: "Dachgeschoss",
         beds: "1 × Double",
         rooms: "Keine zusätzlichen Räume",

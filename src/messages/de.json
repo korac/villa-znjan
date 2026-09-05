@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Villa Žnjan — Apartments am Meer in Split",
-    "description": "Fünf moderne Apartments in Žnjan, Split — nur wenige Schritte vom Strand. Buchen Sie Ihren Adria-Urlaub direkt beim Eigentümer."
+    "title": "Villa Žnjan - Apartments am Meer in Split",
+    "description": "Fünf moderne Apartments in Žnjan, Split - nur wenige Schritte vom Strand. Buchen Sie Ihren Adria-Urlaub direkt beim Eigentümer."
   },
   "nav": {
     "home": "Startseite",
@@ -21,7 +21,7 @@
     },
     "intro": {
       "heading": "Ein entspannter Ausgangspunkt für Ihren Split-Urlaub",
-      "body": "Die Villa Žnjan liegt in einem der begehrtesten Stadtviertel Splits am Meer. Ob als Paar oder mit der Familie — jedes Apartment ist auf Komfort ausgelegt: voll ausgestattete Küchen, Klimaanlage, schnelles WLAN und privater Außenbereich."
+      "body": "Die Villa Žnjan liegt in einem der begehrtesten Stadtviertel Splits am Meer. Ob als Paar oder mit der Familie - jedes Apartment ist auf Komfort ausgelegt: voll ausgestattete Küchen, Klimaanlage, schnelles WLAN und privater Außenbereich."
     },
     "units": {
       "heading": "Unsere Apartments",
@@ -38,7 +38,7 @@
     },
     "contactCta": {
       "heading": "Fragen? Kontaktieren Sie uns",
-      "subheading": "Senden Sie uns eine Nachricht und wir antworten persönlich — meist innerhalb weniger Stunden."
+      "subheading": "Senden Sie uns eine Nachricht und wir antworten persönlich - meist innerhalb weniger Stunden."
     }
   },
   "apartment": {
@@ -89,7 +89,7 @@
     "messagePlaceholder": "Nennen Sie uns Ihre Termine, die Anzahl der Gäste und alles, was Sie wissen möchten.",
     "send": "Nachricht senden",
     "sending": "Wird gesendet…",
-    "success": "Vielen Dank! Ihre Nachricht wurde gesendet — wir melden uns in Kürze.",
+    "success": "Vielen Dank! Ihre Nachricht wurde gesendet - wir melden uns in Kürze.",
     "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine E-Mail.",
     "required": "Dieses Feld ist erforderlich",
     "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"

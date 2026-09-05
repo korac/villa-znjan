@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Villa Žnjan — Apartments by the sea in Split",
-    "description": "Five modern apartments in Žnjan, Split — steps from the beach. Book your Adriatic getaway directly with the owners."
+    "title": "Villa Žnjan - Apartments by the sea in Split",
+    "description": "Five modern apartments in Žnjan, Split - steps from the beach. Book your Adriatic getaway directly with the owners."
   },
   "nav": {
     "home": "Home",
@@ -21,7 +21,7 @@
     },
     "intro": {
       "heading": "A relaxed base for your Split holiday",
-      "body": "Villa Žnjan sits in one of Split's most sought-after seaside neighbourhoods. Whether you're travelling as a couple or a family, each apartment is designed for comfort — fully equipped kitchens, air conditioning, fast Wi‑Fi, and private outdoor space."
+      "body": "Villa Žnjan sits in one of Split's most sought-after seaside neighbourhoods. Whether you're travelling as a couple or a family, each apartment is designed for comfort - fully equipped kitchens, air conditioning, fast Wi-Fi, and private outdoor space."
     },
     "units": {
       "heading": "Our apartments",
@@ -38,7 +38,7 @@
     },
     "contactCta": {
       "heading": "Questions? Get in touch",
-      "subheading": "Send us a message and we'll reply personally — usually within a few hours."
+      "subheading": "Send us a message and we'll reply personally - usually within a few hours."
     }
   },
   "apartment": {
@@ -55,7 +55,7 @@
     "bookingComingSoon": "Online booking is coming soon. In the meantime, contact us to reserve your dates."
   },
   "amenities": {
-    "wifi": "Fast Wi‑Fi",
+    "wifi": "Fast Wi-Fi",
     "airConditioning": "Air conditioning",
     "tv": "TV",
     "elevator": "Elevator",
@@ -89,7 +89,7 @@
     "messagePlaceholder": "Tell us your dates, how many guests, and anything you'd like to know.",
     "send": "Send message",
     "sending": "Sending…",
-    "success": "Thank you! Your message has been sent — we'll be in touch shortly.",
+    "success": "Thank you! Your message has been sent - we'll be in touch shortly.",
     "error": "Something went wrong. Please try again or email us directly.",
     "required": "This field is required",
     "invalidEmail": "Please enter a valid email address"
