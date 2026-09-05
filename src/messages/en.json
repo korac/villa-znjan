@@ -6,6 +6,7 @@
   "nav": {
     "home": "Home",
     "apartments": "Apartments",
+    "villa": "The villa",
     "gallery": "Gallery",
     "location": "Location",
     "contact": "Contact",
@@ -28,6 +29,12 @@
       "subheading": "Five distinct units, each with its own character.",
       "viewDetails": "View details",
       "guests": "{count, plural, one {# guest} other {# guests}}"
+    },
+    "villa": {
+      "eyebrow": "The villa",
+      "heading": "More than a place to sleep",
+      "subheading": "A pool, breakfast on the terrace, a sauna and a gym - shared by every guest.",
+      "cta": "Explore the villa"
     },
     "location": {
       "heading": "The neighbourhood",
@@ -54,6 +61,17 @@
     "backToAll": "All apartments",
     "bookingComingSoon": "Online booking is coming soon. In the meantime, contact us to reserve your dates."
   },
+  "villa": {
+    "hero": {
+      "eyebrow": "Žnjan · Split · Croatia",
+      "heading": "The villa",
+      "subheading": "The pool, the breakfast terrace, the sauna and the gym - everything that belongs to the house, and to every guest staying in it."
+    },
+    "amenities": {
+      "heading": "Also in the house",
+      "subheading": "Practical things you can count on, included with every stay."
+    }
+  },
   "amenities": {
     "wifi": "Fast Wi-Fi",
     "airConditioning": "Air conditioning",
@@ -74,7 +92,7 @@
     "dishwasher": "Dishwasher",
     "kettle": "Kettle",
     "hairDryer": "Hair dryer",
-    "heatedPool": "Heated outdoor pool",
+    "pool": "Outdoor pool",
     "outdoorGrill": "Outdoor BBQ",
     "sauna": "Sauna",
     "gym": "Gym"

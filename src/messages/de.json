@@ -6,6 +6,7 @@
   "nav": {
     "home": "Startseite",
     "apartments": "Apartments",
+    "villa": "Die Villa",
     "gallery": "Galerie",
     "location": "Lage",
     "contact": "Kontakt",
@@ -28,6 +29,12 @@
       "subheading": "Fünf unterschiedliche Einheiten, jede mit eigenem Charakter.",
       "viewDetails": "Details ansehen",
       "guests": "{count, plural, one {# Gast} other {# Gäste}}"
+    },
+    "villa": {
+      "eyebrow": "Die Villa",
+      "heading": "Mehr als ein Ort zum Schlafen",
+      "subheading": "Pool, Frühstück auf der Terrasse, Sauna und Fitnessraum - für alle Gäste.",
+      "cta": "Die Villa entdecken"
     },
     "location": {
       "heading": "Die Umgebung",
@@ -54,6 +61,17 @@
     "backToAll": "Alle Apartments",
     "bookingComingSoon": "Die Online-Buchung ist bald verfügbar. Kontaktieren Sie uns in der Zwischenzeit, um Ihre Termine zu reservieren."
   },
+  "villa": {
+    "hero": {
+      "eyebrow": "Žnjan · Split · Kroatien",
+      "heading": "Die Villa",
+      "subheading": "Pool, Frühstücksterrasse, Sauna und Fitnessraum - alles, was zum Haus gehört und jedem Gast offensteht."
+    },
+    "amenities": {
+      "heading": "Außerdem im Haus",
+      "subheading": "Praktisches, auf das Sie sich verlassen können - bei jedem Aufenthalt inklusive."
+    }
+  },
   "amenities": {
     "wifi": "Schnelles WLAN",
     "airConditioning": "Klimaanlage",
@@ -74,7 +92,7 @@
     "dishwasher": "Geschirrspüler",
     "kettle": "Wasserkocher",
     "hairDryer": "Föhn",
-    "heatedPool": "Beheizter Außenpool",
+    "pool": "Außenpool",
     "outdoorGrill": "Außengrill",
     "sauna": "Sauna",
     "gym": "Fitnessstudio"

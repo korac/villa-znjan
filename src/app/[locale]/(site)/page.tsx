@@ -5,6 +5,7 @@ import { Photo } from "@/components/Photo";
 import { ApartmentCard } from "@/components/ApartmentCard";
 import { Hero } from "@/components/home/Hero";
 import { GallerySection } from "@/components/home/GallerySection";
+import { VillaTeaser } from "@/components/villa/VillaTeaser";
 import { ContactSection } from "@/components/ContactSection";
 import { getApartmentsOrdered } from "@/content/apartments";
 import type { Locale } from "@/i18n/routing";
@@ -58,6 +59,9 @@ export default async function HomePage({
           </div>
         </Container>
       </section>
+
+      {/* Villa facilities teaser -> /villa */}
+      <VillaTeaser />
 
       {/* Location */}
       <section id="location" className="scroll-mt-24 bg-surface py-24">

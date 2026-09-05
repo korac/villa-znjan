@@ -6,6 +6,7 @@
   "nav": {
     "home": "Početna",
     "apartments": "Apartmani",
+    "villa": "Vila",
     "gallery": "Galerija",
     "location": "Lokacija",
     "contact": "Kontakt",
@@ -28,6 +29,12 @@
       "subheading": "Pet različitih jedinica, svaka sa svojim karakterom.",
       "viewDetails": "Detalji",
       "guests": "{count, plural, one {# gost} few {# gosta} other {# gostiju}}"
+    },
+    "villa": {
+      "eyebrow": "Vila",
+      "heading": "Više od mjesta za spavanje",
+      "subheading": "Bazen, doručak na terasi, sauna i teretana - na raspolaganju svim gostima.",
+      "cta": "Istražite vilu"
     },
     "location": {
       "heading": "Susjedstvo",
@@ -54,6 +61,17 @@
     "backToAll": "Svi apartmani",
     "bookingComingSoon": "Online rezervacija uskoro stiže. U međuvremenu nas kontaktirajte za rezervaciju termina."
   },
+  "villa": {
+    "hero": {
+      "eyebrow": "Žnjan · Split · Hrvatska",
+      "heading": "Vila",
+      "subheading": "Bazen, terasa za doručak, sauna i teretana - sve što pripada kući, i svakom gostu koji u njoj boravi."
+    },
+    "amenities": {
+      "heading": "Još u kući",
+      "subheading": "Praktične stvari na koje možete računati, uključene u svaki boravak."
+    }
+  },
   "amenities": {
     "wifi": "Brzi Wi-Fi",
     "airConditioning": "Klima-uređaj",
@@ -74,7 +92,7 @@
     "dishwasher": "Perilica posuđa",
     "kettle": "Kuhalo za vodu",
     "hairDryer": "Fen za kosu",
-    "heatedPool": "Grijani vanjski bazen",
+    "pool": "Vanjski bazen",
     "outdoorGrill": "Vanjski roštilj",
     "sauna": "Sauna",
     "gym": "Teretana"

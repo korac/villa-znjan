@@ -42,7 +42,7 @@ export type AmenityKey =
   | "kettle"
   | "hairDryer"
   // Villa-wide shared facilities
-  | "heatedPool"
+  | "pool"
   | "outdoorGrill"
   | "sauna"
   | "gym";
@@ -88,7 +88,7 @@ const SHARED_AMENITIES: AmenityKey[] = [
   "tv",
   "parking",
   "crib",
-  "heatedPool",
+  "pool",
   "outdoorGrill",
   "sauna",
   "gym",

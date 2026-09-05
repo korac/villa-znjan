@@ -10,6 +10,7 @@ import { cn } from "@/lib/cn";
 
 const navItems = [
   { key: "apartments", href: "/#apartments" },
+  { key: "villa", href: "/villa" },
   { key: "gallery", href: "/#gallery" },
   { key: "location", href: "/#location" },
   { key: "contact", href: "/contact" },
