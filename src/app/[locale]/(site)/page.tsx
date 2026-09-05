@@ -40,7 +40,7 @@ export default async function HomePage({
 
       {/* Apartments */}
       <section id="apartments" className="scroll-mt-24 border-t border-border py-24">
-        <Container>
+        <Container width="narrow">
           <SectionHeading
             eyebrow={t("hero.eyebrow")}
             title={t("units.heading")}
@@ -60,7 +60,7 @@ export default async function HomePage({
         </Container>
       </section>
 
-      {/* Villa facilities teaser -> /villa */}
+      {/* Villa facilities teaser → /villa */}
       <VillaTeaser />
 
       {/* Location */}

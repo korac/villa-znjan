@@ -13,7 +13,7 @@ export function ContactSection({
 
   return (
     <section id="contact" className={`scroll-mt-24 ${className}`}>
-      <Container>
+      <Container width="narrow">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left: heading + direct contact details */}
           <div>
