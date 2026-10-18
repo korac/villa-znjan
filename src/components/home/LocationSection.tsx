@@ -49,9 +49,20 @@ export function LocationSection() {
               href={maps}
               target="_blank"
               rel="noopener noreferrer"
-              className={buttonClasses("outline", "mt-6")}
+              className={buttonClasses("outline", "group mt-6 gap-2")}
             >
               {t("findUs")}
+              {/* Up-right arrow: signals the link leaves the site. */}
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 12 12"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.25"
+                className="size-3 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              >
+                <path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4" />
+              </svg>
             </a>
           </div>
 
