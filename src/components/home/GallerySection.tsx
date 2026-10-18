@@ -3,14 +3,19 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Photo } from "@/components/Photo";
 
-// Editorial asymmetric grid. Swap placeholders for real images in
-// public/gallery and pass real srcs here later.
+// Editorial asymmetric grid: one large lead tile, four small ones.
+// Photos from the 2026 shoot, resized to 2000px in public/gallery.
 const tiles = [
-  { className: "sm:col-span-2 sm:row-span-2 aspect-square sm:aspect-auto" },
-  { className: "aspect-[4/3]" },
-  { className: "aspect-[4/3]" },
-  { className: "aspect-[4/3]" },
-  { className: "aspect-[4/3]" },
+  {
+    src: "/gallery/garden-path.jpg",
+    className: "sm:col-span-2 sm:row-span-2 aspect-square sm:aspect-auto",
+    // Half the grid from sm up, one of two columns below it.
+    sizes: "(min-width: 1280px) 640px, 50vw",
+  },
+  { src: "/gallery/pool.jpg", className: "aspect-[4/3]" },
+  { src: "/gallery/outdoor-kitchen.jpg", className: "aspect-[4/3]" },
+  { src: "/gallery/entrance.jpg", className: "aspect-[4/3]" },
+  { src: "/gallery/pool-night.jpg", className: "aspect-[4/3]" },
 ];
 
 export function GallerySection() {
@@ -27,10 +32,10 @@ export function GallerySection() {
               className={`relative overflow-hidden ${tile.className}`}
             >
               <Photo
-                src={undefined}
+                src={tile.src}
                 alt={`Villa Žnjan ${i + 1}`}
                 index={i + 1}
-                sizes="(min-width: 640px) 25vw, 50vw"
+                sizes={tile.sizes ?? "(min-width: 640px) 25vw, 50vw"}
               />
             </div>
           ))}
