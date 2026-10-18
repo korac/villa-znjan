@@ -1,11 +1,12 @@
 {
   "meta": {
-    "title": "Villa Žnjan — Apartments by the sea in Split",
-    "description": "Five modern apartments in Žnjan, Split — steps from the beach. Book your Adriatic getaway directly with the owners."
+    "title": "Villa Žnjan - Apartments by the sea in Split",
+    "description": "Five modern apartments in Žnjan, Split - steps from the beach. Book your Adriatic getaway directly with the owners."
   },
   "nav": {
     "home": "Home",
     "apartments": "Apartments",
+    "villa": "The villa",
     "gallery": "Gallery",
     "location": "Location",
     "contact": "Contact",
@@ -21,7 +22,7 @@
     },
     "intro": {
       "heading": "A relaxed base for your Split holiday",
-      "body": "Villa Žnjan sits in one of Split's most sought-after seaside neighbourhoods. Whether you're travelling as a couple or a family, each apartment is designed for comfort — fully equipped kitchens, air conditioning, fast Wi‑Fi, and private outdoor space."
+      "body": "Villa Žnjan sits in one of Split's most sought-after seaside neighbourhoods. Whether you're travelling as a couple or a family, each apartment is designed for comfort - fully equipped kitchens, air conditioning, fast Wi-Fi, and private outdoor space."
     },
     "units": {
       "heading": "Our apartments",
@@ -29,16 +30,26 @@
       "viewDetails": "View details",
       "guests": "{count, plural, one {# guest} other {# guests}}"
     },
+    "villa": {
+      "eyebrow": "The villa",
+      "heading": "More than a place to sleep",
+      "subheading": "A pool, breakfast on the terrace, a sauna and a gym - shared by every guest.",
+      "cta": "Explore the villa"
+    },
     "location": {
       "heading": "The neighbourhood",
-      "body": "Žnjan combines easy beach access with a calm residential feel. You're 10 minutes from Diocletian's Palace, close to cafés and restaurants, and well connected to the airport and ferry port."
+      "body": "Žnjan combines easy beach access with a calm residential feel. You're a short drive from Diocletian's Palace, close to cafés and restaurants, and well connected to the airport and ferry port.",
+      "findUs": "Find us",
+      "mapLabel": "Villa Žnjan on Google Maps",
+      "walkMinutes": "{minutes} min walk",
+      "driveMinutes": "{minutes} min drive"
     },
     "gallery": {
       "heading": "Glimpses of Villa Žnjan"
     },
     "contactCta": {
       "heading": "Questions? Get in touch",
-      "subheading": "Send us a message and we'll reply personally — usually within a few hours."
+      "subheading": "Send us a message and we'll reply personally - usually within a few hours."
     }
   },
   "apartment": {
@@ -54,8 +65,19 @@
     "backToAll": "All apartments",
     "bookingComingSoon": "Online booking is coming soon. In the meantime, contact us to reserve your dates."
   },
+  "villa": {
+    "hero": {
+      "eyebrow": "Žnjan · Split · Croatia",
+      "heading": "The villa",
+      "subheading": "The pool, the breakfast terrace, the sauna and the gym - everything that belongs to the house, and to every guest staying in it."
+    },
+    "amenities": {
+      "heading": "Also in the house",
+      "subheading": "Practical things you can count on, included with every stay."
+    }
+  },
   "amenities": {
-    "wifi": "Fast Wi‑Fi",
+    "wifi": "Fast Wi-Fi",
     "airConditioning": "Air conditioning",
     "tv": "TV",
     "elevator": "Elevator",
@@ -74,7 +96,7 @@
     "dishwasher": "Dishwasher",
     "kettle": "Kettle",
     "hairDryer": "Hair dryer",
-    "heatedPool": "Heated outdoor pool",
+    "pool": "Outdoor pool",
     "outdoorGrill": "Outdoor BBQ",
     "sauna": "Sauna",
     "gym": "Gym"
@@ -89,7 +111,7 @@
     "messagePlaceholder": "Tell us your dates, how many guests, and anything you'd like to know.",
     "send": "Send message",
     "sending": "Sending…",
-    "success": "Thank you! Your message has been sent — we'll be in touch shortly.",
+    "success": "Thank you! Your message has been sent - we'll be in touch shortly.",
     "error": "Something went wrong. Please try again or email us directly.",
     "required": "This field is required",
     "invalidEmail": "Please enter a valid email address"
@@ -107,7 +129,7 @@
     "tagline": "Apartments by the sea in Žnjan, Split.",
     "quickLinks": "Quick links",
     "contactHeading": "Contact",
-    "address": "Žnjan, 21000 Split, Croatia",
+    "address": "Makarska 9A, 21000 Split, Croatia",
     "rights": "All rights reserved.",
     "builtNote": "Direct bookings · No platform fees"
   }

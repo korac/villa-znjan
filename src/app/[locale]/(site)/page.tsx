@@ -1,10 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
-import { Photo } from "@/components/Photo";
 import { ApartmentCard } from "@/components/ApartmentCard";
 import { Hero } from "@/components/home/Hero";
 import { GallerySection } from "@/components/home/GallerySection";
+import { VillaTeaser } from "@/components/villa/VillaTeaser";
+import { LocationSection } from "@/components/home/LocationSection";
 import { ContactSection } from "@/components/ContactSection";
 import { getApartmentsOrdered } from "@/content/apartments";
 import type { Locale } from "@/i18n/routing";
@@ -39,7 +40,7 @@ export default async function HomePage({
 
       {/* Apartments */}
       <section id="apartments" className="scroll-mt-24 border-t border-border py-24">
-        <Container>
+        <Container width="narrow">
           <SectionHeading
             eyebrow={t("hero.eyebrow")}
             title={t("units.heading")}
@@ -59,28 +60,10 @@ export default async function HomePage({
         </Container>
       </section>
 
-      {/* Location */}
-      <section id="location" className="scroll-mt-24 bg-surface py-24">
-        <Container>
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
-              <SectionHeading
-                title={t("location.heading")}
-                subtitle={t("location.body")}
-              />
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <Photo
-                src={undefined}
-                alt={t("location.heading")}
-                index={2}
-                label="Žnjan, Split"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
-            </div>
-          </div>
-        </Container>
-      </section>
+      {/* Villa facilities teaser → /villa */}
+      <VillaTeaser />
+
+      <LocationSection />
 
       <GallerySection />
 

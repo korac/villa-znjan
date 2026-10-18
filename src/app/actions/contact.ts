@@ -67,7 +67,7 @@ export async function submitContact(
   const text = [
     `Name: ${name}`,
     `Email: ${email}`,
-    `Phone: ${phone || "—"}`,
+    `Phone: ${phone || "-"}`,
     `Language: ${locale}`,
     "",
     message,

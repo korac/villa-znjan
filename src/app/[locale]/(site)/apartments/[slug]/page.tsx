@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/Container";
-import { ApartmentGallery } from "@/components/apartment/ApartmentGallery";
+import { Gallery } from "@/components/Gallery";
 import { buttonClasses } from "@/components/Button";
 import { routing, type Locale } from "@/i18n/routing";
 import { apartments, getApartment } from "@/content/apartments";
@@ -79,10 +79,12 @@ export default async function ApartmentPage({
 
       {/* Gallery */}
       <Container className="mt-10">
-        <ApartmentGallery
+        <Gallery
           images={apartment.images}
           name={copy.name}
-          order={apartment.order}
+          layout="hero"
+          offset={apartment.order}
+          priority
         />
       </Container>
 

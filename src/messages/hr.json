@@ -1,11 +1,12 @@
 {
   "meta": {
-    "title": "Villa Žnjan — Apartmani uz more u Splitu",
-    "description": "Pet modernih apartmana na Žnjanu u Splitu — nadomak plaže. Rezervirajte svoj odmor na Jadranu izravno kod vlasnika."
+    "title": "Villa Žnjan - Apartmani uz more u Splitu",
+    "description": "Pet modernih apartmana na Žnjanu u Splitu - nadomak plaže. Rezervirajte svoj odmor na Jadranu izravno kod vlasnika."
   },
   "nav": {
     "home": "Početna",
     "apartments": "Apartmani",
+    "villa": "Vila",
     "gallery": "Galerija",
     "location": "Lokacija",
     "contact": "Kontakt",
@@ -21,7 +22,7 @@
     },
     "intro": {
       "heading": "Opušteno polazište za vaš odmor u Splitu",
-      "body": "Villa Žnjan smještena je u jednoj od najtraženijih splitskih četvrti uz more. Bilo da putujete u dvoje ili s obitelji, svaki je apartman uređen za udobnost — potpuno opremljene kuhinje, klima-uređaj, brzi Wi‑Fi i vlastiti vanjski prostor."
+      "body": "Villa Žnjan smještena je u jednoj od najtraženijih splitskih četvrti uz more. Bilo da putujete u dvoje ili s obitelji, svaki je apartman uređen za udobnost - potpuno opremljene kuhinje, klima-uređaj, brzi Wi-Fi i vlastiti vanjski prostor."
     },
     "units": {
       "heading": "Naši apartmani",
@@ -29,16 +30,26 @@
       "viewDetails": "Detalji",
       "guests": "{count, plural, one {# gost} few {# gosta} other {# gostiju}}"
     },
+    "villa": {
+      "eyebrow": "Vila",
+      "heading": "Više od mjesta za spavanje",
+      "subheading": "Bazen, doručak na terasi, sauna i teretana - na raspolaganju svim gostima.",
+      "cta": "Istražite vilu"
+    },
     "location": {
       "heading": "Susjedstvo",
-      "body": "Žnjan spaja jednostavan pristup plaži s mirnim stambenim ugođajem. Dioklecijanova palača udaljena je 10 minuta, u blizini su kafići i restorani, a dobro ste povezani sa zračnom lukom i trajektnom lukom."
+      "body": "Žnjan spaja jednostavan pristup plaži s mirnim stambenim ugođajem. Do Dioklecijanove palače kratka je vožnja, u blizini su kafići i restorani, a dobro ste povezani sa zračnom lukom i trajektnom lukom.",
+      "findUs": "Pronađite nas",
+      "mapLabel": "Villa Žnjan na Google Kartama",
+      "walkMinutes": "{minutes} min hoda",
+      "driveMinutes": "{minutes} min vožnje"
     },
     "gallery": {
       "heading": "Prizori Ville Žnjan"
     },
     "contactCta": {
       "heading": "Pitanja? Javite nam se",
-      "subheading": "Pošaljite nam poruku i odgovorit ćemo osobno — obično unutar nekoliko sati."
+      "subheading": "Pošaljite nam poruku i odgovorit ćemo osobno - obično unutar nekoliko sati."
     }
   },
   "apartment": {
@@ -54,8 +65,19 @@
     "backToAll": "Svi apartmani",
     "bookingComingSoon": "Online rezervacija uskoro stiže. U međuvremenu nas kontaktirajte za rezervaciju termina."
   },
+  "villa": {
+    "hero": {
+      "eyebrow": "Žnjan · Split · Hrvatska",
+      "heading": "Vila",
+      "subheading": "Bazen, terasa za doručak, sauna i teretana - sve što pripada kući, i svakom gostu koji u njoj boravi."
+    },
+    "amenities": {
+      "heading": "Još u kući",
+      "subheading": "Praktične stvari na koje možete računati, uključene u svaki boravak."
+    }
+  },
   "amenities": {
-    "wifi": "Brzi Wi‑Fi",
+    "wifi": "Brzi Wi-Fi",
     "airConditioning": "Klima-uređaj",
     "tv": "TV",
     "elevator": "Dizalo",
@@ -74,7 +96,7 @@
     "dishwasher": "Perilica posuđa",
     "kettle": "Kuhalo za vodu",
     "hairDryer": "Fen za kosu",
-    "heatedPool": "Grijani vanjski bazen",
+    "pool": "Vanjski bazen",
     "outdoorGrill": "Vanjski roštilj",
     "sauna": "Sauna",
     "gym": "Teretana"
@@ -89,7 +111,7 @@
     "messagePlaceholder": "Recite nam termine, broj gostiju i sve što vas zanima.",
     "send": "Pošalji poruku",
     "sending": "Slanje…",
-    "success": "Hvala! Vaša poruka je poslana — javit ćemo vam se uskoro.",
+    "success": "Hvala! Vaša poruka je poslana - javit ćemo vam se uskoro.",
     "error": "Nešto je pošlo po zlu. Pokušajte ponovno ili nam pošaljite email izravno.",
     "required": "Ovo polje je obavezno",
     "invalidEmail": "Unesite valjanu email adresu"
@@ -107,7 +129,7 @@
     "tagline": "Apartmani uz more na Žnjanu, Split.",
     "quickLinks": "Brze poveznice",
     "contactHeading": "Kontakt",
-    "address": "Žnjan, 21000 Split, Hrvatska",
+    "address": "Makarska 9A, 21000 Split, Hrvatska",
     "rights": "Sva prava pridržana.",
     "builtNote": "Izravne rezervacije · Bez provizija platformi"
   }

@@ -5,6 +5,7 @@ import { site } from "@/content/site";
 
 const navItems = [
   { key: "apartments", href: "/#apartments" },
+  { key: "villa", href: "/villa" },
   { key: "gallery", href: "/#gallery" },
   { key: "location", href: "/#location" },
   { key: "contact", href: "/contact" },
@@ -55,14 +56,6 @@ export function Footer() {
                 className="transition-colors hover:text-foreground"
               >
                 {site.email}
-              </a>
-            </p>
-            <p>
-              <a
-                href={`tel:${site.phoneHref}`}
-                className="transition-colors hover:text-foreground"
-              >
-                {site.phone}
               </a>
             </p>
           </address>

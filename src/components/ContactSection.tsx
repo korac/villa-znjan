@@ -13,7 +13,7 @@ export function ContactSection({
 
   return (
     <section id="contact" className={`scroll-mt-24 ${className}`}>
-      <Container>
+      <Container width="narrow">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Left: heading + direct contact details */}
           <div>
@@ -32,14 +32,6 @@ export function ContactSection({
                       className="transition-colors hover:text-foreground"
                     >
                       {site.email}
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      href={`tel:${site.phoneHref}`}
-                      className="transition-colors hover:text-foreground"
-                    >
-                      {site.phone}
                     </a>
                   </p>
                 </dd>
