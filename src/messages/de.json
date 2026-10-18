@@ -38,7 +38,11 @@
     },
     "location": {
       "heading": "Die Umgebung",
-      "body": "Žnjan verbindet einfachen Strandzugang mit ruhigem Wohnambiente. Der Diokletianpalast ist 10 Minuten entfernt, Cafés und Restaurants sind in der Nähe, und Sie sind gut an Flughafen und Fährhafen angebunden."
+      "body": "Žnjan verbindet einfachen Strandzugang mit ruhigem Wohnambiente. Der Diokletianpalast ist nur eine kurze Autofahrt entfernt, Cafés und Restaurants sind in der Nähe, und Sie sind gut an Flughafen und Fährhafen angebunden.",
+      "findUs": "So finden Sie uns",
+      "mapLabel": "Villa Žnjan auf Google Maps",
+      "walkMinutes": "{minutes} Min. zu Fuß",
+      "driveMinutes": "{minutes} Min. Fahrt"
     },
     "gallery": {
       "heading": "Eindrücke der Villa Žnjan"

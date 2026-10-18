@@ -38,7 +38,11 @@
     },
     "location": {
       "heading": "Susjedstvo",
-      "body": "Žnjan spaja jednostavan pristup plaži s mirnim stambenim ugođajem. Dioklecijanova palača udaljena je 10 minuta, u blizini su kafići i restorani, a dobro ste povezani sa zračnom lukom i trajektnom lukom."
+      "body": "Žnjan spaja jednostavan pristup plaži s mirnim stambenim ugođajem. Do Dioklecijanove palače kratka je vožnja, u blizini su kafići i restorani, a dobro ste povezani sa zračnom lukom i trajektnom lukom.",
+      "findUs": "Pronađite nas",
+      "mapLabel": "Villa Žnjan na Google Kartama",
+      "walkMinutes": "{minutes} min hoda",
+      "driveMinutes": "{minutes} min vožnje"
     },
     "gallery": {
       "heading": "Prizori Ville Žnjan"

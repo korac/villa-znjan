@@ -38,7 +38,11 @@
     },
     "location": {
       "heading": "The neighbourhood",
-      "body": "Žnjan combines easy beach access with a calm residential feel. You're 10 minutes from Diocletian's Palace, close to cafés and restaurants, and well connected to the airport and ferry port."
+      "body": "Žnjan combines easy beach access with a calm residential feel. You're a short drive from Diocletian's Palace, close to cafés and restaurants, and well connected to the airport and ferry port.",
+      "findUs": "Find us",
+      "mapLabel": "Villa Žnjan on Google Maps",
+      "walkMinutes": "{minutes} min walk",
+      "driveMinutes": "{minutes} min drive"
     },
     "gallery": {
       "heading": "Glimpses of Villa Žnjan"
