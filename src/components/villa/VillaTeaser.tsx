@@ -42,7 +42,7 @@ export function VillaTeaser() {
                     label={copy.label}
                     sizes="(min-width: 640px) 33vw, 100vw"
                   />
-                  <div className="absolute inset-0 bg-foreground/0 transition-colors duration-500 group-hover:bg-foreground/25" />
+                  <div className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/25" />
                 </div>
                 <h3 className="mt-5 font-serif text-2xl font-semibold transition-colors group-hover:text-highlight">
                   {copy.title}

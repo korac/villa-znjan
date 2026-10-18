@@ -62,7 +62,8 @@ export function LocationSection() {
               centre line plus the column gap.
 
               Lazy so Google's scripts and cookies only land once the section
-              is scrolled to, not on page load. */}
+              is scrolled to, not on page load. The keyless embed has no dark
+              style, so in dark mode it is dimmed rather than left glaring. */}
           {/* The wrapper does the positioning, not the iframe: an iframe is a
               replaced element, so with `width: auto` it falls back to its
               intrinsic 300px instead of stretching between left and right. */}
@@ -73,7 +74,7 @@ export function LocationSection() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen
-              className="aspect-[4/3] h-full w-full border-0 bg-surface-deep lg:aspect-auto"
+              className="aspect-[4/3] h-full w-full border-0 bg-surface-deep lg:aspect-auto dark:brightness-[0.6]"
             />
           </div>
         </div>

@@ -50,16 +50,16 @@ export default async function VillaPage({
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-foreground/75 via-foreground/35 to-foreground/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/35 to-ink/10" />
         <Container className="relative">
-          <div className="max-w-2xl py-16 text-background [text-shadow:0_2px_16px_rgb(0_0_0/0.75)]">
-            <p className="text-xs uppercase tracking-[0.3em] text-background/80">
+          <div className="max-w-2xl py-16 text-limestone [text-shadow:0_2px_16px_rgb(0_0_0/0.75)]">
+            <p className="text-xs uppercase tracking-[0.3em] text-limestone/80">
               {t("villa.hero.eyebrow")}
             </p>
             <h1 className="mt-5 font-serif text-5xl leading-[1.05] sm:text-6xl">
               {t("villa.hero.heading")}
             </h1>
-            <p className="mt-5 text-lg leading-relaxed text-background/90">
+            <p className="mt-5 text-lg leading-relaxed text-limestone/90">
               {t("villa.hero.subheading")}
             </p>
           </div>
