@@ -113,6 +113,7 @@
     "sending": "Slanje…",
     "success": "Hvala! Vaša poruka je poslana - javit ćemo vam se uskoro.",
     "error": "Nešto je pošlo po zlu. Pokušajte ponovno ili nam pošaljite email izravno.",
+    "rateLimited": "Poslali ste nekoliko poruka u kratkom vremenu. Pokušajte ponovno malo kasnije ili nam pišite izravno e-mailom.",
     "required": "Ovo polje je obavezno",
     "invalidEmail": "Unesite valjanu email adresu"
   },
@@ -132,5 +133,15 @@
     "address": "Makarska 9A, 21000 Split, Hrvatska",
     "rights": "Sva prava pridržana.",
     "builtNote": "Izravne rezervacije · Bez provizija platformi"
+  },
+  "email": {
+    "confirmation": {
+      "subject": "Primili smo vašu poruku - Villa Žnjan",
+      "greeting": "Pozdrav, {name},",
+      "intro": "hvala vam na iskazanom interesu. Primili smo vašu poruku i odgovorit ćemo vam u najkraćem mogućem roku.",
+      "copyLabel": "Ovo je kopija vaše poruke:",
+      "addMore": "Ako želite nešto dodati, jednostavno odgovorite na ovaj e-mail.",
+      "signoff": "Lijep pozdrav,"
+    }
   }
 }
