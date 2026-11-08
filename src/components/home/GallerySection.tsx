@@ -4,18 +4,19 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Photo } from "@/components/Photo";
 
 // Editorial asymmetric grid: one large lead tile, four small ones.
-// Photos from the 2026 shoot, resized to 2000px in public/gallery.
+// Photos from the 2026 shoot. They share files with the /villa sections
+// (public/gallery/<topic>/), so each photo exists only once.
 const tiles = [
   {
-    src: "/gallery/garden-path.jpg",
+    src: "/gallery/outdoor/garden-path.jpg",
     className: "sm:col-span-2 sm:row-span-2 aspect-square sm:aspect-auto",
     // Half the grid from sm up, one of two columns below it.
     sizes: "(min-width: 1280px) 640px, 50vw",
   },
-  { src: "/gallery/pool.jpg", className: "aspect-[4/3]" },
-  { src: "/gallery/outdoor-kitchen.jpg", className: "aspect-[4/3]" },
-  { src: "/gallery/entrance.jpg", className: "aspect-[4/3]" },
-  { src: "/gallery/pool-night.jpg", className: "aspect-[4/3]" },
+  { src: "/gallery/pool/DSC07632.jpg", className: "aspect-[4/3]" },
+  { src: "/gallery/outdoor/outdoor-grill-3.jpg", className: "aspect-[4/3]" },
+  { src: "/gallery/outdoor/entrance.jpg", className: "aspect-[4/3]" },
+  { src: "/gallery/pool/DSC07691.jpg", className: "aspect-[4/3]" },
 ];
 
 export function GallerySection() {

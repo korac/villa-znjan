@@ -319,9 +319,9 @@ export const apartments: Apartment[] = [
       "washingMachine",
     ],
     images: [
+      "/apartments/palma/7.jpg",
       "/apartments/palma/0G7A1425.jpg",
       "/apartments/palma/0G7A1462.jpg",
-      "/apartments/palma/7.jpg",
       "/apartments/palma/0G7A1452.jpg",
       "/apartments/palma/5.jpg",
       "/apartments/palma/2.jpg",

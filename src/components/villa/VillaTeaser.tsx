@@ -13,7 +13,7 @@ import type { Locale } from "@/i18n/routing";
 export function VillaTeaser() {
   const locale = useLocale() as Locale;
   const t = useTranslations("home.villa");
-  const sections = getVillaSectionsOrdered();
+  const sections = getVillaSectionsOrdered().filter((s) => s.onHomepage);
 
   return (
     <section id="villa" className="scroll-mt-24 border-t border-border py-24">
