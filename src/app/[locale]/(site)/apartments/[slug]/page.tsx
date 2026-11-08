@@ -24,7 +24,7 @@ export async function generateMetadata({
   if (!apartment) return {};
   const copy = apartment.content[locale];
   return {
-    title: `${copy.name} — Villa Žnjan`,
+    title: `${copy.name} - Villa Žnjan`,
     description: copy.description,
   };
 }

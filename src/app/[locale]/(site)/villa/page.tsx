@@ -23,7 +23,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "villa" });
   return {
-    title: `${t("hero.heading")} — Villa Žnjan`,
+    title: `${t("hero.heading")} - Villa Žnjan`,
     description: t("hero.subheading"),
   };
 }
