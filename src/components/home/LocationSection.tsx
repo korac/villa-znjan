@@ -3,7 +3,7 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { buttonClasses } from "@/components/Button";
 import { destinations } from "@/content/location";
-import { site } from "@/content/site";
+import { ArrowUpRight } from "@/components/ArrowUpRight";
 import { embedUrl, placeUrl } from "@/lib/googleMaps";
 import type { Locale } from "@/i18n/routing";
 
@@ -15,6 +15,9 @@ import type { Locale } from "@/i18n/routing";
 export function LocationSection() {
   const locale = useLocale() as Locale;
   const t = useTranslations("home.location");
+  // Plain text here: the "Find us" button right below already links to the
+  // listing. Footer and contact section use the AddressLink instead.
+  const tFooter = useTranslations("footer");
   const maps = placeUrl();
 
   return (
@@ -43,7 +46,7 @@ export function LocationSection() {
             </dl>
 
             <p className="mt-10 text-sm leading-relaxed text-muted">
-              {site.address}
+              {tFooter("address")}
             </p>
             <a
               href={maps}
@@ -52,17 +55,7 @@ export function LocationSection() {
               className={buttonClasses("outline", "group mt-6 gap-2")}
             >
               {t("findUs")}
-              {/* Up-right arrow: signals the link leaves the site. */}
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 12 12"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.25"
-                className="size-3 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-              >
-                <path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4" />
-              </svg>
+              <ArrowUpRight />
             </a>
           </div>
 

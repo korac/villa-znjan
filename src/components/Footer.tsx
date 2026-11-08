@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/Container";
 import { site } from "@/content/site";
+import { AddressLink } from "@/components/AddressLink";
 
 const navItems = [
   { key: "apartments", href: "/#apartments" },
@@ -49,7 +50,9 @@ export function Footer() {
         <div className="space-y-4">
           <h4 className="eyebrow">{t("footer.contactHeading")}</h4>
           <address className="space-y-3 text-sm not-italic text-muted">
-            <p className="leading-relaxed">{t("footer.address")}</p>
+            <p className="leading-relaxed">
+              <AddressLink />
+            </p>
             <p>
               <a
                 href={`mailto:${site.email}`}

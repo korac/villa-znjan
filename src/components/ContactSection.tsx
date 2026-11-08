@@ -3,6 +3,7 @@ import { Container } from "@/components/Container";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/content/site";
+import { AddressLink } from "@/components/AddressLink";
 
 export function ContactSection({
   className = "",
@@ -38,7 +39,9 @@ export function ContactSection({
               </div>
               <div>
                 <dt className="eyebrow">{t("nav.location")}</dt>
-                <dd className="mt-2 text-muted">{t("footer.address")}</dd>
+                <dd className="mt-2 text-muted">
+                  <AddressLink />
+                </dd>
               </div>
             </dl>
           </div>
