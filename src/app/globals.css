@@ -3,17 +3,32 @@
 /* ── Villa Žnjan design system ──────────────────────────────────────────
    Warm Mediterranean stone palette · serif display type · sharp edges.   */
 @theme {
-  /* Palette — warm limestone / Dalmatian stone */
-  --color-background: #f7f3ec; /* warm off-white limestone */
-  --color-surface: #efe7db; /* sand panel */
-  --color-surface-deep: #e7dcca; /* deeper sand */
-  --color-foreground: #262019; /* deep warm charcoal (ink) */
-  --color-muted: #7a7163; /* warm grey-brown text */
-  --color-border: #ddd2c0; /* subtle stone hairline */
-  --color-accent: #2f5d62; /* deep Adriatic teal */
-  --color-accent-hover: #264a4e;
-  --color-accent-foreground: #f7f3ec;
-  --color-highlight: #b0603f; /* warm terracotta — hover/interaction pop */
+  /* Palette — warm limestone / Dalmatian stone by day, "midnight harbour"
+     by night. Each token is light-dark(<light>, <dark>), resolved against
+     `color-scheme` on <html> (see the base layer below), so the site follows
+     the device setting with no JavaScript.
+
+     Lightning CSS compiles light-dark() down to custom properties that are
+     switched by `color-scheme` declarations in this stylesheet. A future
+     manual toggle therefore needs a CSS rule such as
+     `html[data-theme="dark"] { color-scheme: dark; }` plus a matching
+     `@custom-variant dark` for the few `dark:` utilities - setting
+     `style.colorScheme` from JavaScript alone would not switch the palette. */
+  --color-background: light-dark(#f7f3ec, #0b1113); /* limestone / harbour night */
+  --color-surface: light-dark(#efe7db, #10181b); /* sand panel */
+  --color-surface-deep: light-dark(#e7dcca, #151f23); /* deeper sand */
+  --color-foreground: light-dark(#262019, #c9c4b9); /* ink / soft stone */
+  --color-muted: light-dark(#6e6557, #7f8a88); /* secondary text - AA on surface */
+  --color-border: light-dark(#ddd2c0, #1f2b31); /* hairline */
+  --color-accent: light-dark(#2f5d62, #5b8e90); /* Adriatic teal */
+  --color-accent-hover: light-dark(#264a4e, #6c9fa1);
+  --color-accent-foreground: light-dark(#f7f3ec, #0b1113);
+  --color-highlight: light-dark(#b0603f, #b97c5d); /* terracotta — hover/interaction pop */
+
+  /* Fixed tones that do NOT follow the colour scheme. For text and scrims
+     laid over photographs, which are the same picture in either mode. */
+  --color-ink: #262019;
+  --color-limestone: #f7f3ec;
 
   /* Typography */
   --font-serif: var(--font-cormorant), ui-serif, Georgia, "Times New Roman",
@@ -33,6 +48,9 @@
 
 @layer base {
   html {
+    /* Lets light-dark() follow the device setting, and switches native UI
+       (scrollbars, form controls, autofill) along with it. */
+    color-scheme: light dark;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
