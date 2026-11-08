@@ -6,6 +6,7 @@ import { Hero } from "@/components/home/Hero";
 import { GallerySection } from "@/components/home/GallerySection";
 import { VillaTeaser } from "@/components/villa/VillaTeaser";
 import { LocationSection } from "@/components/home/LocationSection";
+import { FaqSection } from "@/components/home/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { getApartmentsOrdered } from "@/content/apartments";
 import type { Locale } from "@/i18n/routing";
@@ -67,8 +68,10 @@ export default async function HomePage({
 
       <GallerySection />
 
-      {/* Contact — sits directly before the footer */}
       <ContactSection className="border-t border-border py-24" />
+
+      {/* FAQ - after the contact form, directly before the footer */}
+      <FaqSection />
     </main>
   );
 }

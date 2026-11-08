@@ -6,7 +6,7 @@
   "nav": {
     "home": "Početna",
     "apartments": "Apartmani",
-    "villa": "Vila",
+    "villa": "Villa",
     "gallery": "Galerija",
     "location": "Lokacija",
     "contact": "Kontakt",
@@ -46,6 +46,9 @@
     },
     "gallery": {
       "heading": "Prizori Ville Žnjan"
+    },
+    "faq": {
+      "heading": "Česta pitanja"
     },
     "contactCta": {
       "heading": "Pitanja? Javite nam se",
