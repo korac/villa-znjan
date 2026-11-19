@@ -1,7 +1,12 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "@/lib/seo";
+import { IS_PRODUCTION, SITE_URL } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
+  // Beta, previews and local builds: keep every crawler out.
+  if (!IS_PRODUCTION) {
+    return { rules: { userAgent: "*", disallow: "/" } };
+  }
+
   return {
     rules: {
       userAgent: "*",

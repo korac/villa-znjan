@@ -8,6 +8,14 @@ import { routing, type Locale } from "@/i18n/routing";
  */
 export const SITE_URL = "https://villaznjan.com";
 
+/**
+ * True only on the production deployment (villaznjan.com). Everywhere else -
+ * beta.villaznjan.com (the develop branch), Vercel previews, local builds -
+ * the site tells search engines not to index it, so beta never competes
+ * with the real site in Google.
+ */
+export const IS_PRODUCTION = process.env.VERCEL_ENV === "production";
+
 /** Default social share image, 1200x630 (public/og-image.jpg). */
 export const DEFAULT_OG_IMAGE = "/og-image.jpg";
 
