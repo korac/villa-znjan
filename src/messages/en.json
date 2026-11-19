@@ -113,6 +113,7 @@
     "message": "Message",
     "messagePlaceholder": "Tell us your dates, how many guests, and anything you'd like to know.",
     "send": "Send message",
+    "privacyNote": "We use your details only to answer your enquiry. See our <link>privacy policy</link>.",
     "sending": "Sending…",
     "success": "Thank you! Your message has been sent - we'll be in touch shortly.",
     "error": "Something went wrong. Please try again or email us directly.",

@@ -113,6 +113,7 @@
     "message": "Poruka",
     "messagePlaceholder": "Recite nam termine, broj gostiju i sve što vas zanima.",
     "send": "Pošalji poruku",
+    "privacyNote": "Vaše podatke koristimo isključivo kako bismo odgovorili na vaš upit. Pogledajte naša <link>pravila privatnosti</link>.",
     "sending": "Slanje…",
     "success": "Hvala! Vaša poruka je poslana - javit ćemo vam se uskoro.",
     "error": "Nešto je pošlo po zlu. Pokušajte ponovno ili nam pošaljite email izravno.",

@@ -113,6 +113,7 @@
     "message": "Nachricht",
     "messagePlaceholder": "Nennen Sie uns Ihre Termine, die Anzahl der Gäste und alles, was Sie wissen möchten.",
     "send": "Nachricht senden",
+    "privacyNote": "Wir verwenden Ihre Angaben ausschließlich zur Beantwortung Ihrer Anfrage. Siehe unsere <link>Datenschutzerklärung</link>.",
     "sending": "Wird gesendet…",
     "success": "Vielen Dank! Ihre Nachricht wurde gesendet - wir melden uns in Kürze.",
     "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine E-Mail.",

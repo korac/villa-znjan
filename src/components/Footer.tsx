@@ -71,7 +71,12 @@ export function Footer() {
           <span>
             © {year} {site.name}. {t("footer.rights")}
           </span>
-          <CookieSettingsLink />
+          <div className="flex items-center gap-6">
+            <Link href="/privacy" className="transition-colors hover:text-foreground">
+              {t("cookies.privacy")}
+            </Link>
+            <CookieSettingsLink />
+          </div>
         </Container>
       </div>
     </footer>
