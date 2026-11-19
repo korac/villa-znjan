@@ -49,6 +49,8 @@ export default async function proxy(req: NextRequest) {
 }
 
 export const config = {
-  // Match all pathnames except API routes, Next internals, and files with an extension.
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // Match all pathnames except API routes, the PostHog proxy (/ingest),
+  // Next internals, and files with an extension. Without the /ingest
+  // exclusion the password gate and locale routing would swallow analytics.
+  matcher: ["/((?!api|ingest|_next|_vercel|.*\\..*).*)"],
 };

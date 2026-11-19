@@ -7,6 +7,7 @@ import { Container } from "@/components/Container";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { buttonClasses } from "@/components/Button";
 import { cn } from "@/lib/cn";
+import { track } from "@/lib/analytics";
 
 const navItems = [
   { key: "apartments", href: "/#apartments" },
@@ -47,7 +48,11 @@ export function Header() {
 
         <div className="hidden items-center gap-6 lg:flex">
           <LocaleSwitcher />
-          <Link href="/#apartments" className={buttonClasses("primary")}>
+          <Link
+            href="/#apartments"
+            className={buttonClasses("primary")}
+            onClick={() => track("book_now_clicked", { source: "header" })}
+          >
             {t("bookNow")}
           </Link>
         </div>

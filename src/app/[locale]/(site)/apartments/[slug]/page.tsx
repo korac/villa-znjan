@@ -7,6 +7,8 @@ import { Gallery } from "@/components/Gallery";
 import { buttonClasses } from "@/components/Button";
 import { routing, type Locale } from "@/i18n/routing";
 import { apartments, getApartment } from "@/content/apartments";
+import { TrackedLink } from "@/components/analytics/TrackedLink";
+import { TrackOnMount } from "@/components/analytics/TrackOnMount";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -52,6 +54,10 @@ export default async function ApartmentPage({
 
   return (
     <main className="py-12 sm:py-16">
+      <TrackOnMount
+        event="apartment_viewed"
+        properties={{ apartment: apartment.slug }}
+      />
       <Container>
         <Link
           href="/#apartments"
@@ -127,12 +133,14 @@ export default async function ApartmentPage({
               {/*    {t("apartment.perNight")}*/}
               {/*  </span>*/}
               {/*</p>*/}
-              <Link
+              <TrackedLink
                 href="/contact"
                 className={buttonClasses("primary", "mt-6 w-full")}
+                event="book_now_clicked"
+                properties={{ source: "apartment", apartment: apartment.slug }}
               >
                 {t("apartment.bookNow")}
-              </Link>
+              </TrackedLink>
               <p className="mt-4 text-xs leading-relaxed text-muted">
                 {t("apartment.bookingComingSoon")}
               </p>

@@ -9,6 +9,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import "yet-another-react-lightbox/plugins/counter.css";
 import { Photo } from "@/components/Photo";
 import { cn } from "@/lib/cn";
+import { track } from "@/lib/analytics";
 
 /**
  * Shared image gallery: a lead photo plus secondary tiles, every one of which
@@ -62,7 +63,9 @@ export function Gallery({
   const remaining = images.length - (secondaryCount + 1);
 
   const openAt = (i: number) => {
-    if (hasImages) setIndex(i);
+    if (!hasImages) return;
+    setIndex(i);
+    track("gallery_opened", { gallery: name, photo: i + 1 });
   };
 
   const tileProps = (i: number) => ({
