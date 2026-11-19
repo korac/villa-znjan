@@ -156,5 +156,10 @@
     "privacy": "Privacy policy",
     "settings": "Cookie settings",
     "mapPlaceholder": "The map loads once you accept cookies."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "Sorry, this page doesn't exist or has moved.",
+    "home": "Back to the homepage"
   }
 }

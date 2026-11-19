@@ -156,5 +156,10 @@
     "privacy": "Pravila privatnosti",
     "settings": "Postavke kolačića",
     "mapPlaceholder": "Karta se prikazuje nakon što prihvatite kolačiće."
+  },
+  "notFound": {
+    "title": "Stranica nije pronađena",
+    "text": "Nažalost, ova stranica ne postoji ili je premještena.",
+    "home": "Natrag na početnu"
   }
 }

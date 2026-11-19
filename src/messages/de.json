@@ -156,5 +156,10 @@
     "privacy": "Datenschutz",
     "settings": "Cookie-Einstellungen",
     "mapPlaceholder": "Die Karte wird angezeigt, sobald Sie Cookies akzeptieren."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "text": "Diese Seite existiert leider nicht oder wurde verschoben.",
+    "home": "Zurück zur Startseite"
   }
 }
