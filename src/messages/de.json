@@ -1,11 +1,12 @@
 {
   "meta": {
-    "title": "Villa Žnjan — Apartments am Meer in Split",
-    "description": "Fünf moderne Apartments in Žnjan, Split — nur wenige Schritte vom Strand. Buchen Sie Ihren Adria-Urlaub direkt beim Eigentümer."
+    "title": "Villa Žnjan - Apartments am Meer in Split",
+    "description": "Fünf moderne Apartments in Žnjan, Split, nur wenige Gehminuten vom Strand. Pool, Frühstück und kostenlose Parkplätze inklusive. Fragen Sie direkt bei den Eigentümern an."
   },
   "nav": {
     "home": "Startseite",
     "apartments": "Apartments",
+    "villa": "Die Villa",
     "gallery": "Galerie",
     "location": "Lage",
     "contact": "Kontakt",
@@ -21,7 +22,7 @@
     },
     "intro": {
       "heading": "Ein entspannter Ausgangspunkt für Ihren Split-Urlaub",
-      "body": "Die Villa Žnjan liegt in einem der begehrtesten Stadtviertel Splits am Meer. Ob als Paar oder mit der Familie — jedes Apartment ist auf Komfort ausgelegt: voll ausgestattete Küchen, Klimaanlage, schnelles WLAN und privater Außenbereich."
+      "body": "Die Villa Žnjan liegt in einem der begehrtesten Stadtviertel Splits am Meer. Ob als Paar oder mit der Familie - jedes Apartment ist auf Komfort ausgelegt: voll ausgestattete Küchen, Klimaanlage, schnelles WLAN und privater Außenbereich."
     },
     "units": {
       "heading": "Unsere Apartments",
@@ -29,16 +30,29 @@
       "viewDetails": "Details ansehen",
       "guests": "{count, plural, one {# Gast} other {# Gäste}}"
     },
+    "villa": {
+      "eyebrow": "Die Villa",
+      "heading": "Mehr als ein Ort zum Schlafen",
+      "subheading": "Pool, Frühstück auf der Terrasse, Sauna und Fitnessraum - für alle Gäste.",
+      "cta": "Die Villa entdecken"
+    },
     "location": {
       "heading": "Die Umgebung",
-      "body": "Žnjan verbindet einfachen Strandzugang mit ruhigem Wohnambiente. Der Diokletianpalast ist 10 Minuten entfernt, Cafés und Restaurants sind in der Nähe, und Sie sind gut an Flughafen und Fährhafen angebunden."
+      "body": "Žnjan verbindet einfachen Strandzugang mit ruhigem Wohnambiente. Der Diokletianpalast ist nur eine kurze Autofahrt entfernt, Cafés und Restaurants sind in der Nähe, und Sie sind gut an Flughafen und Fährhafen angebunden.",
+      "findUs": "So finden Sie uns",
+      "mapLabel": "Villa Žnjan auf Google Maps",
+      "walkMinutes": "{minutes} Min. zu Fuß",
+      "driveMinutes": "{minutes} Min. Fahrt"
     },
     "gallery": {
       "heading": "Eindrücke der Villa Žnjan"
     },
+    "faq": {
+      "heading": "Häufige Fragen"
+    },
     "contactCta": {
       "heading": "Fragen? Kontaktieren Sie uns",
-      "subheading": "Senden Sie uns eine Nachricht und wir antworten persönlich — meist innerhalb weniger Stunden."
+      "subheading": "Senden Sie uns eine Nachricht und wir antworten persönlich - meist innerhalb weniger Stunden."
     }
   },
   "apartment": {
@@ -54,21 +68,41 @@
     "backToAll": "Alle Apartments",
     "bookingComingSoon": "Die Online-Buchung ist bald verfügbar. Kontaktieren Sie uns in der Zwischenzeit, um Ihre Termine zu reservieren."
   },
+  "villa": {
+    "hero": {
+      "eyebrow": "Žnjan · Split · Kroatien",
+      "heading": "Die Villa",
+      "subheading": "Pool, Frühstücksterrasse, Sauna und Fitnessraum - alles, was zum Haus gehört und jedem Gast offensteht."
+    },
+    "amenities": {
+      "heading": "Alles, was Sie brauchen",
+      "subheading": "Praktisches, auf das Sie sich verlassen können - bei jedem Aufenthalt inklusive."
+    }
+  },
   "amenities": {
     "wifi": "Schnelles WLAN",
     "airConditioning": "Klimaanlage",
-    "kitchen": "Ausgestattete Küche",
+    "tv": "TV",
+    "elevator": "Aufzug",
+    "parking": "Kostenlose Parkplätze",
+    "crib": "Babybett (auf Anfrage)",
     "seaView": "Meerblick",
     "terrace": "Private Terrasse",
     "balcony": "Balkon",
-    "parking": "Kostenlose Parkplätze",
+    "kitchen": "Ausgestattete Küche",
     "washingMachine": "Waschmaschine",
-    "tv": "TV",
-    "coffeeMachine": "Kaffeemaschine",
+    "stove": "Herd",
+    "oven": "Backofen",
+    "microwave": "Mikrowelle",
+    "refrigerator": "Kühlschrank",
+    "miniFridge": "Mini-Kühlschrank",
     "dishwasher": "Geschirrspüler",
-    "elevator": "Aufzug",
-    "petsAllowed": "Haustiere erlaubt",
-    "crib": "Babybett"
+    "kettle": "Wasserkocher",
+    "hairDryer": "Föhn",
+    "pool": "Außenpool",
+    "outdoorGrill": "Außengrill",
+    "sauna": "Sauna",
+    "gym": "Fitnessstudio"
   },
   "contact": {
     "heading": "Kontaktieren Sie uns",
@@ -79,18 +113,53 @@
     "message": "Nachricht",
     "messagePlaceholder": "Nennen Sie uns Ihre Termine, die Anzahl der Gäste und alles, was Sie wissen möchten.",
     "send": "Nachricht senden",
+    "privacyNote": "Wir verwenden Ihre Angaben ausschließlich zur Beantwortung Ihrer Anfrage. Siehe unsere <link>Datenschutzerklärung</link>.",
     "sending": "Wird gesendet…",
-    "success": "Vielen Dank! Ihre Nachricht wurde gesendet — wir melden uns in Kürze.",
+    "success": "Vielen Dank! Ihre Nachricht wurde gesendet - wir melden uns in Kürze.",
     "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt eine E-Mail.",
+    "rateLimited": "Sie haben in kurzer Zeit mehrere Nachrichten gesendet. Bitte versuchen Sie es etwas später noch einmal oder schreiben Sie uns direkt per E-Mail.",
     "required": "Dieses Feld ist erforderlich",
     "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+  },
+  "unlock": {
+    "eyebrow": "Private Vorschau",
+    "heading": "Willkommen in der Villa Žnjan",
+    "description": "Die Seite befindet sich in der Entwicklung. Bitte geben Sie das Zugangspasswort ein, um fortzufahren.",
+    "passwordLabel": "Passwort",
+    "submit": "Weiter",
+    "submitting": "Wird geprüft…",
+    "error": "Falsches Passwort. Bitte erneut versuchen."
   },
   "footer": {
     "tagline": "Apartments am Meer in Žnjan, Split.",
     "quickLinks": "Schnelllinks",
     "contactHeading": "Kontakt",
-    "address": "Žnjan, 21000 Split, Kroatien",
+    "address": "Makarska 9A, 21000 Split, Kroatien",
     "rights": "Alle Rechte vorbehalten.",
     "builtNote": "Direktbuchungen · Keine Plattformgebühren"
+  },
+  "email": {
+    "confirmation": {
+      "subject": "Ihre Nachricht ist angekommen - Villa Žnjan",
+      "greeting": "Hallo {name},",
+      "intro": "vielen Dank für Ihr Interesse! Ihre Nachricht ist bei uns angekommen, und wir melden uns so bald wie möglich bei Ihnen.",
+      "copyLabel": "Hier noch einmal Ihre Nachricht:",
+      "addMore": "Möchten Sie noch etwas ergänzen? Antworten Sie einfach auf diese E-Mail.",
+      "signoff": "Viele Grüße"
+    }
+  },
+  "cookies": {
+    "label": "Cookie-Einwilligung",
+    "text": "Cookies ermöglichen eine Karte, damit Sie uns leicht finden, und helfen uns, die Website für unsere Besucher zu verbessern.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "privacy": "Datenschutz",
+    "settings": "Cookie-Einstellungen",
+    "mapPlaceholder": "Die Karte wird angezeigt, sobald Sie Cookies akzeptieren."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "text": "Diese Seite existiert leider nicht oder wurde verschoben.",
+    "home": "Zurück zur Startseite"
   }
 }

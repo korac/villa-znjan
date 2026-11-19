@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 import Script from "next/script";
 import { useLocale, useTranslations } from "next-intl";
 import {
@@ -9,9 +9,17 @@ import {
   type ContactFieldError,
 } from "@/app/actions/contact";
 import { Button } from "@/components/Button";
+import { Link } from "@/i18n/navigation";
+import { track } from "@/lib/analytics";
 
 const initialState: ContactState = { status: "idle" };
 const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+declare global {
+  interface Window {
+    turnstile?: { reset: (widget?: string | HTMLElement) => void };
+  }
+}
 
 const fieldClasses =
   "w-full border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted/70 focus:border-accent";
@@ -24,6 +32,14 @@ export function ContactForm() {
     submitContact,
     initialState,
   );
+
+  // A Turnstile token is single-use. After a failed submit, fetch a fresh
+  // one so the retry isn't rejected for reusing the old token.
+  useEffect(() => {
+    if (state.status === "error") window.turnstile?.reset();
+    // Counts sent enquiries. Language only: no name, email or message.
+    if (state.status === "success") track("contact_submitted", { locale });
+  }, [state, locale]);
 
   if (state.status === "success") {
     return (
@@ -125,12 +141,27 @@ export function ContactForm() {
       )}
 
       {state.status === "error" && !state.errors && (
-        <p className="text-sm text-accent">{t("error")}</p>
+        <p role="alert" className="text-sm text-accent">
+          {state.reason === "rateLimited" ? t("rateLimited") : t("error")}
+        </p>
       )}
 
       <Button type="submit" variant="primary" disabled={pending}>
         {pending ? t("sending") : t("send")}
       </Button>
+
+      <p className="text-xs leading-relaxed text-muted">
+        {t.rich("privacyNote", {
+          link: (chunks) => (
+            <Link
+              href="/privacy"
+              className="underline decoration-muted/50 underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+            >
+              {chunks}
+            </Link>
+          ),
+        })}
+      </p>
     </form>
   );
 }

@@ -7,26 +7,45 @@ import type { Locale } from "@/i18n/routing";
  * (bookings, availability_blocks, pricing_rules) references units by this slug.
  * Marketing content lives here (not in the DB) because the units are fixed.
  *
+ * Source: owner spec PDF (2026-06-08). Values marked "TBD" below were highlighted
+ * yellow in the spec and are pending owner confirmation — the 34 m² for every
+ * unit and several bed configurations are placeholders to be verified before
+ * launch.
+ *
  * Photos: drop real files into `public/apartments/<slug>/` and list them in
  * `images`. While `images` is empty, the UI renders elegant stone placeholders.
  */
 
 // Amenity keys map 1:1 to the `amenities` namespace in src/messages/*.json
 export type AmenityKey =
+  // Shared villa amenities
   | "wifi"
   | "airConditioning"
-  | "kitchen"
+  | "tv"
+  | "elevator"
+  | "parking"
+  | "crib"
+  // Outdoor + view
   | "seaView"
   | "terrace"
   | "balcony"
-  | "parking"
+  // In-apartment essentials
+  | "kitchen"
   | "washingMachine"
-  | "tv"
-  | "coffeeMachine"
+  // Kitchen appliances
+  | "stove"
+  | "oven"
+  | "microwave"
+  | "refrigerator"
+  | "miniFridge"
   | "dishwasher"
-  | "elevator"
-  | "petsAllowed"
-  | "crib";
+  | "kettle"
+  | "hairDryer"
+  // Villa-wide shared facilities
+  | "pool"
+  | "outdoorGrill"
+  | "sauna"
+  | "gym";
 
 export interface ApartmentCopy {
   /** Display name (proper noun — usually identical across locales) */
@@ -35,6 +54,12 @@ export interface ApartmentCopy {
   tagline: string;
   /** 2–3 sentence description */
   description: string;
+  /** Floor label, e.g. "Ground floor" / "Prizemlje" / "Erdgeschoss" */
+  floor: string;
+  /** Bed configuration, e.g. "1 × King-size · 2 × Double · 1 × Single" */
+  beds: string;
+  /** Rooms summary, e.g. "Kitchen, dining, living" */
+  rooms: string;
 }
 
 export interface Apartment {
@@ -43,250 +68,367 @@ export interface Apartment {
   maxGuests: number;
   bedrooms: number;
   bathrooms: number;
+  /** Square metres. TBD per owner spec — placeholder until verified. */
   sizeM2: number;
+  /** Number of balconies + terraces combined. */
+  outdoorSpaces: number;
   /** Indicative "from" nightly rate in EUR. Live pricing comes from Supabase in Phase 2. */
   basePriceEur: number;
   amenities: AmenityKey[];
-  /** Paths under /public (e.g. "/apartments/marina/01.jpg"). Empty → placeholders. */
+  /** Paths under /public (e.g. "/apartments/palma/01.jpg"). Empty → placeholders. */
   images: string[];
   content: Record<Locale, ApartmentCopy>;
 }
 
+// Every guest has access to these regardless of unit, so they appear on every
+// apartment page. Listed once and spread into each apartment's amenities below.
+const SHARED_AMENITIES: AmenityKey[] = [
+  "wifi",
+  "airConditioning",
+  "tv",
+  "parking",
+  "crib",
+  "pool",
+  "outdoorGrill",
+  "sauna",
+  "gym",
+];
+
 export const apartments: Apartment[] = [
-  {
-    slug: "lavanda",
-    order: 1,
-    maxGuests: 2,
-    bedrooms: 1,
-    bathrooms: 1,
-    sizeM2: 34,
-    basePriceEur: 120,
-    amenities: [
-      "wifi",
-      "airConditioning",
-      "kitchen",
-      "balcony",
-      "tv",
-      "coffeeMachine",
-      "washingMachine",
-    ],
-    images: [
-      "/apartments/lavanda/1.jpg",
-      "/apartments/lavanda/2.jpg",
-      "/apartments/lavanda/3.jpg",
-      "/apartments/lavanda/4.jpg",
-      "/apartments/lavanda/5.jpeg",
-      "/apartments/lavanda/6.jpeg",
-    ],
-    content: {
-      en: {
-        name: "Lavanda",
-        tagline: "An intimate retreat for two",
-        description:
-          "A serene one-bedroom hideaway bathed in morning light, with a private balcony for unhurried breakfasts. Thoughtfully furnished in warm, natural tones — the perfect base for a couple's escape to the coast.",
-      },
-      hr: {
-        name: "Lavanda",
-        tagline: "Intimno utočište za dvoje",
-        description:
-          "Spokojan apartman s jednom spavaćom sobom okupan jutarnjim svjetlom, s privatnim balkonom za nesmetane doručke. Pažljivo opremljen u toplim, prirodnim tonovima — savršena baza za bijeg dvoje na obalu.",
-      },
-      de: {
-        name: "Lavanda",
-        tagline: "Ein intimer Rückzugsort für zwei",
-        description:
-          "Ein ruhiges Apartment mit einem Schlafzimmer, durchflutet von Morgenlicht, mit privatem Balkon für gemütliche Frühstücke. Geschmackvoll in warmen, natürlichen Tönen eingerichtet — die perfekte Basis für eine Auszeit zu zweit an der Küste.",
-      },
-    },
-  },
-  {
-    slug: "marina",
-    order: 2,
-    maxGuests: 4,
-    bedrooms: 2,
-    bathrooms: 1,
-    sizeM2: 63,
-    basePriceEur: 160,
-    amenities: [
-      "wifi",
-      "airConditioning",
-      "kitchen",
-      "seaView",
-      "balcony",
-      "tv",
-      "coffeeMachine",
-    ],
-    images: [
-      "/apartments/marina/1.jpg",
-      // "/apartments/marina/2.jpg",
-      "/apartments/marina/3.jpg",
-      // "/apartments/marina/4.jpg",
-      "/apartments/marina/5.jpg",
-      // "/apartments/marina/6.jpg",
-      "/apartments/marina/7.jpg",
-      // "/apartments/marina/8.jpg",
-      "/apartments/marina/9.jpg",
-    ],
-    content: {
-      en: {
-        name: "Marina",
-        tagline: "Sea views and open living",
-        description:
-          "An airy one-bedroom apartment with a generous living space that opens to glimpses of the Adriatic. Ideal for a couple or small family seeking light, comfort, and the sound of the sea nearby.",
-      },
-      hr: {
-        name: "Marina",
-        tagline: "Pogled na more i otvoren prostor",
-        description:
-          "Prozračan apartman s jednom spavaćom sobom i prostranim dnevnim boravkom koji se otvara prema pogledu na Jadran. Idealan za par ili manju obitelj koja traži svjetlo, udobnost i blizinu mora.",
-      },
-      de: {
-        name: "Marina",
-        tagline: "Meerblick und offenes Wohnen",
-        description:
-          "Ein luftiges Apartment mit einem Schlafzimmer und großzügigem Wohnbereich, der den Blick auf die Adria freigibt. Ideal für ein Paar oder eine kleine Familie auf der Suche nach Licht, Komfort und der Nähe zum Meer.",
-      },
-    },
-  },
+  // A1 — Maslina (ground floor, 3BR, family flagship)
   {
     slug: "maslina",
-    order: 3,
-    maxGuests: 4,
-    bedrooms: 2,
-    bathrooms: 1,
-    sizeM2: 68,
-    basePriceEur: 210,
-    amenities: [
-      "wifi",
-      "airConditioning",
-      "kitchen",
-      "terrace",
-      "tv",
-      "coffeeMachine",
-      "washingMachine",
-      "dishwasher",
-      "parking",
-    ],
-    images: [],
-    content: {
-      en: {
-        name: "Maslina",
-        tagline: "Family comfort under the olive tree",
-        description:
-          "A spacious two-bedroom apartment opening onto a sun-dappled terrace, named for the olive groves that define this coast. Room for the whole family to gather, dine outdoors, and slow down.",
-      },
-      hr: {
-        name: "Maslina",
-        tagline: "Obiteljska udobnost pod maslinom",
-        description:
-          "Prostran apartman s dvije spavaće sobe koji se otvara na sunčanu terasu, nazvan po maslinicima koji obilježavaju ovu obalu. Dovoljno prostora da se cijela obitelj okupi, objeduje na otvorenom i uspori.",
-      },
-      de: {
-        name: "Maslina",
-        tagline: "Familienkomfort unter dem Olivenbaum",
-        description:
-          "Ein geräumiges Apartment mit zwei Schlafzimmern und sonniger Terrasse, benannt nach den Olivenhainen dieser Küste. Platz für die ganze Familie, um zusammenzukommen, draußen zu speisen und zur Ruhe zu kommen.",
-      },
-    },
-  },
-  {
-    slug: "adriana",
-    order: 4,
-    maxGuests: 5,
-    bedrooms: 2,
-    bathrooms: 2,
-    sizeM2: 82,
-    basePriceEur: 250,
-    amenities: [
-      "wifi",
-      "airConditioning",
-      "kitchen",
-      "seaView",
-      "terrace",
-      "tv",
-      "coffeeMachine",
-      "washingMachine",
-      "dishwasher",
-      "parking",
-      "crib",
-    ],
-    images: [
-      "/apartments/adriana/7.jpg",
-      "/apartments/adriana/5.jpg",
-      "/apartments/adriana/1.jpg",
-      // "/apartments/adriana/2.jpg",
-      "/apartments/adriana/3.jpg",
-      // "/apartments/adriana/4.jpg",
-      "/apartments/adriana/6.jpg",
-    ],
-    content: {
-      en: {
-        name: "Adriana",
-        tagline: "Refined living with two bathrooms",
-        description:
-          "An elegant two-bedroom residence with two full bathrooms and a wide terrace framing the sea. Designed for families and friends who value space, privacy, and a touch of indulgence.",
-      },
-      hr: {
-        name: "Adriana",
-        tagline: "Profinjeno življenje s dvije kupaonice",
-        description:
-          "Elegantan apartman s dvije spavaće sobe i dvije kupaonice te širokom terasom koja uokviruje more. Osmišljen za obitelji i prijatelje koji cijene prostor, privatnost i dašak luksuza.",
-      },
-      de: {
-        name: "Adriana",
-        tagline: "Gehobenes Wohnen mit zwei Bädern",
-        description:
-          "Eine elegante Residenz mit zwei Schlafzimmern, zwei Bädern und einer weiten Terrasse, die das Meer einrahmt. Konzipiert für Familien und Freunde, die Raum, Privatsphäre und ein wenig Luxus schätzen.",
-      },
-    },
-  },
-  {
-    slug: "jadran",
-    order: 5,
+    order: 1,
     maxGuests: 6,
     bedrooms: 3,
     bathrooms: 2,
-    sizeM2: 105,
-    basePriceEur: 390,
+    sizeM2: 114,
+    outdoorSpaces: 1,
+    basePriceEur: 0,
     amenities: [
-      "wifi",
-      "airConditioning",
+      ...SHARED_AMENITIES,
+      "balcony",
       "kitchen",
-      "seaView",
-      "terrace",
-      "tv",
-      "coffeeMachine",
-      "washingMachine",
+      "stove",
+      "oven",
       "dishwasher",
-      "parking",
-      "elevator",
-      "crib",
+      "microwave",
+      "refrigerator",
+      "hairDryer",
+      "washingMachine",
     ],
     images: [
-      "/apartments/jadran/1.JPG",
-      "/apartments/jadran/2.JPG",
-      "/apartments/jadran/3.JPG",
-      "/apartments/jadran/4.JPG",
-      "/apartments/jadran/5.JPG",
+      "/apartments/maslina/0G7A1612.jpg",
+      "/apartments/maslina/1.jpg",
+      "/apartments/maslina/0G7A1570.jpg",
+      "/apartments/maslina/0G7A1661.jpg",
+      "/apartments/maslina/0G7A1567.jpg",
+      "/apartments/maslina/0G7A1588.jpg",
+      "/apartments/maslina/0G7A1592.jpg",
+      "/apartments/maslina/5.jpg",
+      "/apartments/maslina/0G7A1604.jpg",
+      "/apartments/maslina/0G7A1607.jpg",
+      "/apartments/maslina/0G7A1619.jpg",
+      "/apartments/maslina/0G7A1625.jpg",
+      "/apartments/maslina/0G7A1636.jpg",
+      "/apartments/maslina/0G7A1641.jpg",
+      "/apartments/maslina/0G7A1646.jpg",
+      "/apartments/maslina/0G7A1652.jpg",
+      "/apartments/maslina/0G7A1654.jpg",
+      "/apartments/maslina/0G7A1659.jpg",
+      "/apartments/maslina/0G7A1669.jpg",
+      "/apartments/maslina/0G7A1680.jpg",
+      "/apartments/maslina/IMG_3980.jpg",
+      "/apartments/maslina/IMG_3987.jpg",
     ],
     content: {
       en: {
-        name: "Penthouse Jadran",
-        tagline: "The crown of Villa Žnjan",
+        name: "Maslina",
+        tagline: "Family comfort on the garden floor",
         description:
-          "Our top-floor penthouse with three bedrooms, a sweeping sea-view terrace, and the finest finishes in the house. The definitive choice for larger families or those who simply want the very best.",
+          "Our spacious ground-floor apartment with three bedrooms, two bathrooms, and a balcony overlooking the garden and pool. The right choice for larger families or anyone who simply wants the very best.",
+        floor: "Ground floor",
+        beds: "1 × King-size · 2 × Double · 1 × Single",
+        rooms: "Kitchen, dining, living",
       },
       hr: {
-        name: "Penthouse Jadran",
-        tagline: "Kruna Ville Žnjan",
+        name: "Maslina",
+        tagline: "Obiteljska udobnost u prizemlju",
         description:
-          "Naš penthouse na posljednjem katu s tri spavaće sobe, prostranom terasom s pogledom na more i najljepšim detaljima u kući. Pravi izbor za veće obitelji ili one koji jednostavno žele ono najbolje.",
+          "Prostrani apartman u prizemlju s tri spavaće sobe, dvije kupaonice i balkonom s pogledom na vrt s bazenom. Pravi izbor za veće obitelji ili one koji jednostavno žele ono najbolje.",
+        floor: "Prizemlje",
+        beds: "1 × King-size · 2 × Double · 1 × Single",
+        rooms: "Kuhinja, blagovaonica, dnevni boravak",
       },
       de: {
-        name: "Penthouse Jadran",
-        tagline: "Die Krone der Villa Žnjan",
+        name: "Maslina",
+        tagline: "Familienkomfort im Erdgeschoss",
         description:
-          "Unser Penthouse im obersten Stock mit drei Schlafzimmern, einer weitläufigen Terrasse mit Meerblick und der edelsten Ausstattung im Haus. Die erste Wahl für größere Familien oder alle, die einfach das Beste wollen.",
+          "Unser geräumiges Erdgeschoss-Apartment mit drei Schlafzimmern, zwei Bädern und einem Balkon mit Blick auf Garten und Pool. Die richtige Wahl für größere Familien oder alle, die einfach das Beste wollen.",
+        floor: "Erdgeschoss",
+        beds: "1 × King-size · 2 × Double · 1 × Single",
+        rooms: "Küche, Esszimmer, Wohnzimmer",
+      },
+    },
+  },
+
+  // A2 — Brnistra (attic, 1BR + sleeping gallery, sea view)
+  {
+    slug: "brnistra",
+    order: 2,
+    maxGuests: 4,
+    bedrooms: 1,
+    bathrooms: 1,
+    sizeM2: 63,
+    outdoorSpaces: 1,
+    basePriceEur: 0,
+    amenities: [
+      ...SHARED_AMENITIES,
+      "terrace",
+      "seaView",
+      "elevator",
+      "kitchen",
+      "stove",
+      "microwave",
+      "refrigerator",
+      "kettle",
+      "hairDryer",
+      "washingMachine",
+    ],
+    images: [
+      "/apartments/brnistra/1.jpg",
+      "/apartments/brnistra/8.jpg",
+      "/apartments/brnistra/5.jpg",
+      "/apartments/brnistra/0G7A1534.jpg",
+      "/apartments/brnistra/9.jpg",
+      "/apartments/brnistra/6.jpg",
+      "/apartments/brnistra/7.jpg",
+      "/apartments/brnistra/2.jpg",
+      "/apartments/brnistra/0G7A1546.jpg",
+      "/apartments/brnistra/0G7A1551.jpg",
+    ],
+    content: {
+      en: {
+        name: "Brnistra",
+        tagline: "Top-floor terrace with sea view",
+        description:
+          "An airy attic apartment with one bedroom, a full kitchen, a living room, and a generous terrace looking out to the sea. Ideal for a couple or small family seeking light, comfort, and the nearness of the Adriatic.",
+        floor: "Top floor / attic",
+        beds: "1 × Double · 3 × Single", // TBD per owner spec
+        rooms: "Kitchen, dining, living, sleeping gallery",
+      },
+      hr: {
+        name: "Brnistra",
+        tagline: "Potkrovna terasa s pogledom na more",
+        description:
+          "Prozračan apartman s jednom spavaćom sobom, kuhinjom, dnevnim boravkom te prostranom terasom s pogledom na more. Idealan za par ili manju obitelj koja traži svjetlo, udobnost i blizinu mora.",
+        floor: "Treći kat / potkrovlje",
+        beds: "1 × Double · 3 × Single",
+        rooms: "Kuhinja, blagovaonica, dnevni boravak, spavaća galerija",
+      },
+      de: {
+        name: "Brnistra",
+        tagline: "Dachterrasse mit Meerblick",
+        description:
+          "Ein luftiges Dachgeschoss-Apartment mit einem Schlafzimmer, voll ausgestatteter Küche, Wohnzimmer und einer großzügigen Terrasse mit Blick auf die Adria. Ideal für ein Paar oder eine kleine Familie auf der Suche nach Licht, Komfort und der Nähe zum Meer.",
+        floor: "Dachgeschoss",
+        beds: "1 × Double · 3 × Single",
+        rooms: "Küche, Esszimmer, Wohnzimmer, Schlafgalerie",
+      },
+    },
+  },
+
+  // A3 — Oleandar (attic, hotel-style room with ensuite, archipelago view)
+  {
+    slug: "oleandar",
+    order: 3,
+    maxGuests: 2,
+    bedrooms: 1,
+    bathrooms: 1,
+    sizeM2: 21,
+    outdoorSpaces: 0,
+    basePriceEur: 0,
+    amenities: [
+      ...SHARED_AMENITIES,
+      "seaView",
+      "elevator",
+      "kettle",
+      "miniFridge",
+      "hairDryer",
+    ],
+    images: [
+      "/apartments/oleander/a3-1.jpg",
+      "/apartments/oleander/a3-2.jpg",
+      "/apartments/oleander/a3-4.jpg",
+      "/apartments/oleander/0G7A1682.jpg",
+      "/apartments/oleander/0G7A1705.jpg",
+      "/apartments/oleander/a3-3.jpg",
+      "/apartments/oleander/0G7A1687.jpg",
+      "/apartments/oleander/0G7A1697.jpg",
+      "/apartments/oleander/0G7A1694.jpg",
+    ],
+    content: {
+      en: {
+        name: "Oleandar",
+        tagline: "Quiet hideaway above the archipelago",
+        description:
+          "A private room with a spacious ensuite bathroom and a view over the Split archipelago. Carefully furnished in warm, natural tones - the perfect base for a couple's escape to the coast.",
+        floor: "Top floor / attic",
+        beds: "1 × Double",
+        rooms: "No additional rooms",
+      },
+      hr: {
+        name: "Oleandar",
+        tagline: "Mirno utočište iznad arhipelaga",
+        description:
+          "Privatna soba s prostranom ensuite kupaonicom te pogledom na splitski arhipelag. Pažljivo opremljena u toplim, prirodnim tonovima - savršena baza za bijeg dvoje na obalu.",
+        floor: "Treći kat / potkrovlje",
+        beds: "1 × Double",
+        rooms: "Nema dodatnih prostorija",
+      },
+      de: {
+        name: "Oleandar",
+        tagline: "Ruhiger Rückzugsort über dem Archipel",
+        description:
+          "Ein privates Zimmer mit geräumigem Ensuite-Bad und Blick auf den Splitter Archipel. Geschmackvoll in warmen, natürlichen Tönen eingerichtet - die perfekte Basis für eine Auszeit zu zweit an der Küste.",
+        floor: "Dachgeschoss",
+        beds: "1 × Double",
+        rooms: "Keine zusätzlichen Räume",
+      },
+    },
+  },
+
+  // A4 — Palma (attic, 2BR, balcony + terrace, sea view)
+  {
+    slug: "palma",
+    order: 4,
+    maxGuests: 4,
+    bedrooms: 2,
+    bathrooms: 1,
+    sizeM2: 81,
+    outdoorSpaces: 2,
+    basePriceEur: 0,
+    amenities: [
+      ...SHARED_AMENITIES,
+      "balcony",
+      "terrace",
+      "seaView",
+      "elevator",
+      "kitchen",
+      "stove",
+      "microwave",
+      "refrigerator",
+      "kettle",
+      "hairDryer",
+      "washingMachine",
+    ],
+    images: [
+      "/apartments/palma/7.jpg",
+      "/apartments/palma/0G7A1425.jpg",
+      "/apartments/palma/0G7A1462.jpg",
+      "/apartments/palma/0G7A1452.jpg",
+      "/apartments/palma/5.jpg",
+      "/apartments/palma/2.jpg",
+      "/apartments/palma/3.jpg",
+      "/apartments/palma/4.jpg",
+      "/apartments/palma/0G7A1424.jpg",
+      "/apartments/palma/0G7A1434.jpg",
+      "/apartments/palma/0G7A1436.jpg",
+      "/apartments/palma/0G7A1444.jpg",
+      "/apartments/palma/0G7A1448.jpg",
+      "/apartments/palma/0G7A1469.jpg",
+      "/apartments/palma/0G7A1478.jpg",
+
+    ],
+    content: {
+      en: {
+        name: "Palma",
+        tagline: "Two bedrooms with a sea-frame terrace",
+        description:
+          "An elegant two-bedroom apartment with a full bathroom and a wide terrace framing the sea. Space enough for the whole family to gather, dine outdoors, and slow down.",
+        floor: "Top floor / attic",
+        beds: "1 × Double · 2 × Single", // TBD per owner spec
+        rooms: "Open-plan kitchen, dining, and living",
+      },
+      hr: {
+        name: "Palma",
+        tagline: "Dvije sobe i terasa uz more",
+        description:
+          "Elegantan apartman s dvije spavaće sobe i kupaonicom te širokom terasom koja uokviruje more. Dovoljno prostora da se cijela obitelj okupi, objeduje na otvorenom i uspori.",
+        floor: "Treći kat / potkrovlje",
+        beds: "1 × Double · 2 × Single",
+        rooms: "Open-space kuhinja, blagovaonica i dnevni boravak",
+      },
+      de: {
+        name: "Palma",
+        tagline: "Zwei Schlafzimmer mit Meerblick-Terrasse",
+        description:
+          "Ein elegantes Apartment mit zwei Schlafzimmern, einem Bad und einer weiten Terrasse, die das Meer einrahmt. Genug Platz, damit die ganze Familie zusammenkommt, draußen speist und zur Ruhe kommt.",
+        floor: "Dachgeschoss",
+        beds: "1 × Double · 2 × Single",
+        rooms: "Offene Küche, Esszimmer und Wohnzimmer",
+      },
+    },
+  },
+
+  // A5 — Lavanda (2nd floor, 1BR + sofa bed, terrace, sea view)
+  {
+    slug: "lavanda",
+    order: 5,
+    maxGuests: 3,
+    bedrooms: 1,
+    bathrooms: 1,
+    sizeM2: 58,
+    outdoorSpaces: 1,
+    basePriceEur: 0,
+    amenities: [
+      ...SHARED_AMENITIES,
+      "terrace",
+      "seaView",
+      "elevator",
+      "kettle",
+      "miniFridge",
+      "hairDryer",
+      "washingMachine",
+    ],
+    images: [
+      "/apartments/lavanda/0G7A1501.jpg",
+      "/apartments/lavanda/1.jpg",
+      "/apartments/lavanda/0G7A1489.jpg",
+      "/apartments/lavanda/3.jpg",
+      "/apartments/lavanda/BJ7A1474.jpg",
+      "/apartments/lavanda/0G7A1502.jpg",
+      "/apartments/lavanda/0G7A1513.jpg",
+      "/apartments/lavanda/4.jpg",
+      "/apartments/lavanda/5.jpg",
+    ],
+    content: {
+      en: {
+        name: "Lavanda",
+        tagline: "Morning light and unhurried breakfasts",
+        description:
+          "A serene one-bedroom apartment bathed in morning light, with a private terrace and sea view for unhurried breakfasts. Designed for friends and small families who value space, privacy, and a touch of indulgence.",
+        floor: "Second floor",
+        beds: "1 × King-size · 1 × Sofa bed", // TBD per owner spec
+        rooms: "Living room",
+      },
+      hr: {
+        name: "Lavanda",
+        tagline: "Jutarnje svjetlo i nesmetani doručci",
+        description:
+          "Spokojan apartman s jednom spavaćom sobom okupan jutarnjim svjetlom, s privatnom terasom i pogledom na more za nesmetane doručke. Osmišljen za prijatelje i manje obitelji koji cijene prostor, privatnost i dašak luksuza.",
+        floor: "2. kat",
+        beds: "1 × King-size · 1 × Sofa bed",
+        rooms: "Dnevni boravak",
+      },
+      de: {
+        name: "Lavanda",
+        tagline: "Morgenlicht und gemütliche Frühstücke",
+        description:
+          "Ein ruhiges Apartment mit einem Schlafzimmer, durchflutet von Morgenlicht, mit privater Terrasse und Meerblick für gemütliche Frühstücke. Konzipiert für Freunde und kleinere Familien, die Raum, Privatsphäre und ein wenig Luxus schätzen.",
+        floor: "Zweite Etage",
+        beds: "1 × King-size · 1 × Sofa bed",
+        rooms: "Wohnzimmer",
       },
     },
   },

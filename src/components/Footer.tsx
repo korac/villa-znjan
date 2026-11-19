@@ -2,9 +2,12 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/Container";
 import { site } from "@/content/site";
+import { AddressLink } from "@/components/AddressLink";
+import { CookieSettingsLink } from "@/components/CookieSettingsLink";
 
 const navItems = [
   { key: "apartments", href: "/#apartments" },
+  { key: "villa", href: "/villa" },
   { key: "gallery", href: "/#gallery" },
   { key: "location", href: "/#location" },
   { key: "contact", href: "/contact" },
@@ -48,21 +51,15 @@ export function Footer() {
         <div className="space-y-4">
           <h4 className="eyebrow">{t("footer.contactHeading")}</h4>
           <address className="space-y-3 text-sm not-italic text-muted">
-            <p className="leading-relaxed">{t("footer.address")}</p>
+            <p className="leading-relaxed">
+              <AddressLink />
+            </p>
             <p>
               <a
                 href={`mailto:${site.email}`}
                 className="transition-colors hover:text-foreground"
               >
                 {site.email}
-              </a>
-            </p>
-            <p>
-              <a
-                href={`tel:${site.phoneHref}`}
-                className="transition-colors hover:text-foreground"
-              >
-                {site.phone}
               </a>
             </p>
           </address>
@@ -74,6 +71,12 @@ export function Footer() {
           <span>
             © {year} {site.name}. {t("footer.rights")}
           </span>
+          <div className="flex items-center gap-6">
+            <Link href="/privacy" className="transition-colors hover:text-foreground">
+              {t("cookies.privacy")}
+            </Link>
+            <CookieSettingsLink />
+          </div>
         </Container>
       </div>
     </footer>

@@ -1,11 +1,12 @@
 {
   "meta": {
-    "title": "Villa Žnjan — Apartmani uz more u Splitu",
-    "description": "Pet modernih apartmana na Žnjanu u Splitu — nadomak plaže. Rezervirajte svoj odmor na Jadranu izravno kod vlasnika."
+    "title": "Villa Žnjan - Apartmani uz more u Splitu",
+    "description": "Pet modernih apartmana na Žnjanu u Splitu, nekoliko minuta hoda od plaže. Bazen, doručak i besplatan parking uključeni. Upit pošaljite izravno vlasnicima."
   },
   "nav": {
     "home": "Početna",
     "apartments": "Apartmani",
+    "villa": "Villa",
     "gallery": "Galerija",
     "location": "Lokacija",
     "contact": "Kontakt",
@@ -21,7 +22,7 @@
     },
     "intro": {
       "heading": "Opušteno polazište za vaš odmor u Splitu",
-      "body": "Villa Žnjan smještena je u jednoj od najtraženijih splitskih četvrti uz more. Bilo da putujete u dvoje ili s obitelji, svaki je apartman uređen za udobnost — potpuno opremljene kuhinje, klima-uređaj, brzi Wi‑Fi i vlastiti vanjski prostor."
+      "body": "Villa Žnjan smještena je u jednoj od najtraženijih splitskih četvrti uz more. Bilo da putujete u dvoje ili s obitelji, svaki je apartman uređen za udobnost - potpuno opremljene kuhinje, klima-uređaj, brzi Wi-Fi i vlastiti vanjski prostor."
     },
     "units": {
       "heading": "Naši apartmani",
@@ -29,16 +30,29 @@
       "viewDetails": "Detalji",
       "guests": "{count, plural, one {# gost} few {# gosta} other {# gostiju}}"
     },
+    "villa": {
+      "eyebrow": "Vila",
+      "heading": "Više od mjesta za spavanje",
+      "subheading": "Bazen, doručak na terasi, sauna i teretana - na raspolaganju svim gostima.",
+      "cta": "Istražite vilu"
+    },
     "location": {
       "heading": "Susjedstvo",
-      "body": "Žnjan spaja jednostavan pristup plaži s mirnim stambenim ugođajem. Dioklecijanova palača udaljena je 10 minuta, u blizini su kafići i restorani, a dobro ste povezani sa zračnom lukom i trajektnom lukom."
+      "body": "Žnjan spaja jednostavan pristup plaži s mirnim stambenim ugođajem. Do Dioklecijanove palače kratka je vožnja, u blizini su kafići i restorani, a dobro ste povezani sa zračnom lukom i trajektnom lukom.",
+      "findUs": "Pronađite nas",
+      "mapLabel": "Villa Žnjan na Google Kartama",
+      "walkMinutes": "{minutes} min hoda",
+      "driveMinutes": "{minutes} min vožnje"
     },
     "gallery": {
       "heading": "Prizori Ville Žnjan"
     },
+    "faq": {
+      "heading": "Česta pitanja"
+    },
     "contactCta": {
       "heading": "Pitanja? Javite nam se",
-      "subheading": "Pošaljite nam poruku i odgovorit ćemo osobno — obično unutar nekoliko sati."
+      "subheading": "Pošaljite nam poruku i odgovorit ćemo osobno - obično unutar nekoliko sati."
     }
   },
   "apartment": {
@@ -54,21 +68,41 @@
     "backToAll": "Svi apartmani",
     "bookingComingSoon": "Online rezervacija uskoro stiže. U međuvremenu nas kontaktirajte za rezervaciju termina."
   },
+  "villa": {
+    "hero": {
+      "eyebrow": "Žnjan · Split · Hrvatska",
+      "heading": "Vila",
+      "subheading": "Bazen, terasa za doručak, sauna i teretana - sve što pripada kući, i svakom gostu koji u njoj boravi."
+    },
+    "amenities": {
+      "heading": "Sve što vam treba",
+      "subheading": "Praktične stvari na koje možete računati, uključene u svaki boravak."
+    }
+  },
   "amenities": {
-    "wifi": "Brzi Wi‑Fi",
+    "wifi": "Brzi Wi-Fi",
     "airConditioning": "Klima-uređaj",
-    "kitchen": "Opremljena kuhinja",
+    "tv": "TV",
+    "elevator": "Dizalo",
+    "parking": "Besplatan parking",
+    "crib": "Dječji krevetić (na upit)",
     "seaView": "Pogled na more",
     "terrace": "Privatna terasa",
     "balcony": "Balkon",
-    "parking": "Besplatan parking",
+    "kitchen": "Opremljena kuhinja",
     "washingMachine": "Perilica rublja",
-    "tv": "TV",
-    "coffeeMachine": "Aparat za kavu",
+    "stove": "Štednjak",
+    "oven": "Pećnica",
+    "microwave": "Mikrovalna",
+    "refrigerator": "Hladnjak",
+    "miniFridge": "Mini-hladnjak",
     "dishwasher": "Perilica posuđa",
-    "elevator": "Dizalo",
-    "petsAllowed": "Ljubimci dozvoljeni",
-    "crib": "Dječji krevetić"
+    "kettle": "Kuhalo za vodu",
+    "hairDryer": "Fen za kosu",
+    "pool": "Vanjski bazen",
+    "outdoorGrill": "Vanjski roštilj",
+    "sauna": "Sauna",
+    "gym": "Teretana"
   },
   "contact": {
     "heading": "Kontaktirajte nas",
@@ -79,18 +113,53 @@
     "message": "Poruka",
     "messagePlaceholder": "Recite nam termine, broj gostiju i sve što vas zanima.",
     "send": "Pošalji poruku",
+    "privacyNote": "Vaše podatke koristimo isključivo kako bismo odgovorili na vaš upit. Pogledajte naša <link>pravila privatnosti</link>.",
     "sending": "Slanje…",
-    "success": "Hvala! Vaša poruka je poslana — javit ćemo vam se uskoro.",
+    "success": "Hvala! Vaša poruka je poslana - javit ćemo vam se uskoro.",
     "error": "Nešto je pošlo po zlu. Pokušajte ponovno ili nam pošaljite email izravno.",
+    "rateLimited": "Poslali ste nekoliko poruka u kratkom vremenu. Pokušajte ponovno malo kasnije ili nam pišite izravno e-mailom.",
     "required": "Ovo polje je obavezno",
     "invalidEmail": "Unesite valjanu email adresu"
+  },
+  "unlock": {
+    "eyebrow": "Privatna inačica",
+    "heading": "Dobrodošli u Villu Žnjan",
+    "description": "Stranica je u izradi. Unesite pristupnu lozinku za nastavak.",
+    "passwordLabel": "Lozinka",
+    "submit": "Nastavi",
+    "submitting": "Provjera…",
+    "error": "Pogrešna lozinka. Pokušajte ponovno."
   },
   "footer": {
     "tagline": "Apartmani uz more na Žnjanu, Split.",
     "quickLinks": "Brze poveznice",
     "contactHeading": "Kontakt",
-    "address": "Žnjan, 21000 Split, Hrvatska",
+    "address": "Makarska 9A, 21000 Split, Hrvatska",
     "rights": "Sva prava pridržana.",
     "builtNote": "Izravne rezervacije · Bez provizija platformi"
+  },
+  "email": {
+    "confirmation": {
+      "subject": "Primili smo vašu poruku - Villa Žnjan",
+      "greeting": "Pozdrav, {name},",
+      "intro": "hvala vam na iskazanom interesu. Primili smo vašu poruku i odgovorit ćemo vam u najkraćem mogućem roku.",
+      "copyLabel": "Ovo je kopija vaše poruke:",
+      "addMore": "Ako želite nešto dodati, jednostavno odgovorite na ovaj e-mail.",
+      "signoff": "Lijep pozdrav,"
+    }
+  },
+  "cookies": {
+    "label": "Privola za kolačiće",
+    "text": "Kolačići nam omogućuju prikaz karte kako biste nas lako pronašli i pomažu nam poboljšati stranicu za naše posjetitelje.",
+    "accept": "Prihvati",
+    "decline": "Odbij",
+    "privacy": "Pravila privatnosti",
+    "settings": "Postavke kolačića",
+    "mapPlaceholder": "Karta se prikazuje nakon što prihvatite kolačiće."
+  },
+  "notFound": {
+    "title": "Stranica nije pronađena",
+    "text": "Nažalost, ova stranica ne postoji ili je premještena.",
+    "home": "Natrag na početnu"
   }
 }
