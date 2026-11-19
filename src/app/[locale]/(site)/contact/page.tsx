@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { ContactSection } from "@/components/ContactSection";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -14,7 +15,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
-  return { title: `${t("heading")} - Villa Žnjan` };
+  return pageMetadata({
+    locale,
+    path: "/contact",
+    title: `${t("heading")} - Villa Žnjan`,
+    description: t("subheading"),
+  });
 }
 
 export default async function ContactPage({

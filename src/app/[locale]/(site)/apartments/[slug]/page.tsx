@@ -7,6 +7,11 @@ import { Gallery } from "@/components/Gallery";
 import { buttonClasses } from "@/components/Button";
 import { routing, type Locale } from "@/i18n/routing";
 import { apartments, getApartment } from "@/content/apartments";
+import { TrackedLink } from "@/components/analytics/TrackedLink";
+import { TrackOnMount } from "@/components/analytics/TrackOnMount";
+import { pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { apartmentSchema } from "@/lib/structuredData";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -23,10 +28,13 @@ export async function generateMetadata({
   const apartment = getApartment(slug);
   if (!apartment) return {};
   const copy = apartment.content[locale];
-  return {
+  return pageMetadata({
+    locale,
+    path: `/apartments/${apartment.slug}`,
     title: `${copy.name} - Villa Žnjan`,
     description: copy.description,
-  };
+    image: apartment.images[0],
+  });
 }
 
 export default async function ApartmentPage({
@@ -52,6 +60,18 @@ export default async function ApartmentPage({
 
   return (
     <main className="py-12 sm:py-16">
+      <JsonLd
+        data={apartmentSchema({
+          locale,
+          apartment,
+          copy,
+          amenities: apartment.amenities.map((key) => t(`amenities.${key}`)),
+        })}
+      />
+      <TrackOnMount
+        event="apartment_viewed"
+        properties={{ apartment: apartment.slug }}
+      />
       <Container>
         <Link
           href="/#apartments"
@@ -127,12 +147,14 @@ export default async function ApartmentPage({
               {/*    {t("apartment.perNight")}*/}
               {/*  </span>*/}
               {/*</p>*/}
-              <Link
+              <TrackedLink
                 href="/contact"
                 className={buttonClasses("primary", "mt-6 w-full")}
+                event="book_now_clicked"
+                properties={{ source: "apartment", apartment: apartment.slug }}
               >
                 {t("apartment.bookNow")}
-              </Link>
+              </TrackedLink>
               <p className="mt-4 text-xs leading-relaxed text-muted">
                 {t("apartment.bookingComingSoon")}
               </p>

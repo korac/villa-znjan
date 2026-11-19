@@ -9,6 +9,8 @@ import {
   type ContactFieldError,
 } from "@/app/actions/contact";
 import { Button } from "@/components/Button";
+import { Link } from "@/i18n/navigation";
+import { track } from "@/lib/analytics";
 
 const initialState: ContactState = { status: "idle" };
 const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
@@ -35,7 +37,9 @@ export function ContactForm() {
   // one so the retry isn't rejected for reusing the old token.
   useEffect(() => {
     if (state.status === "error") window.turnstile?.reset();
-  }, [state]);
+    // Counts sent enquiries. Language only: no name, email or message.
+    if (state.status === "success") track("contact_submitted", { locale });
+  }, [state, locale]);
 
   if (state.status === "success") {
     return (
@@ -145,6 +149,19 @@ export function ContactForm() {
       <Button type="submit" variant="primary" disabled={pending}>
         {pending ? t("sending") : t("send")}
       </Button>
+
+      <p className="text-xs leading-relaxed text-muted">
+        {t.rich("privacyNote", {
+          link: (chunks) => (
+            <Link
+              href="/privacy"
+              className="underline decoration-muted/50 underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground"
+            >
+              {chunks}
+            </Link>
+          ),
+        })}
+      </p>
     </form>
   );
 }

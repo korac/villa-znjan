@@ -13,6 +13,12 @@ const SLIDE_MS = 6000;
 export function Hero() {
   const t = useTranslations("home.hero");
   const [active, setActive] = useState(0);
+  // Highest slide shown so far. Slides beyond it + 1 aren't mounted yet, so
+  // the page loads two hero photos up front (current and next) instead of
+  // all five, which the browser would fetch at once because they're stacked
+  // in the viewport.
+  const [reached, setReached] = useState(0);
+  if (active > reached) setReached(active);
 
   // Advance after each slide's lifetime; manual jumps reset the timer via [active].
   useEffect(() => {
@@ -33,14 +39,16 @@ export function Hero() {
           style={{ opacity: i === active ? 1 : 0 }}
           aria-hidden={i !== active}
         >
-          <Photo
-            src={src}
-            alt={t("title")}
-            index={0}
-            priority={i === 0}
-            label="Villa Žnjan"
-            sizes="100vw"
-          />
+          {i <= reached + 1 && (
+            <Photo
+              src={src}
+              alt={t("title")}
+              index={0}
+              priority={i === 0}
+              label="Villa Žnjan"
+              sizes="100vw"
+            />
+          )}
         </div>
       ))}
       {/* Scrim for legibility, weighted to the left where the text sits */}

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Villa Žnjan - Apartmani uz more u Splitu",
-    "description": "Pet modernih apartmana na Žnjanu u Splitu - nadomak plaže. Rezervirajte svoj odmor na Jadranu izravno kod vlasnika."
+    "description": "Pet modernih apartmana na Žnjanu u Splitu, nekoliko minuta hoda od plaže. Bazen, doručak i besplatan parking uključeni. Upit pošaljite izravno vlasnicima."
   },
   "nav": {
     "home": "Početna",
@@ -113,6 +113,7 @@
     "message": "Poruka",
     "messagePlaceholder": "Recite nam termine, broj gostiju i sve što vas zanima.",
     "send": "Pošalji poruku",
+    "privacyNote": "Vaše podatke koristimo isključivo kako bismo odgovorili na vaš upit. Pogledajte naša <link>pravila privatnosti</link>.",
     "sending": "Slanje…",
     "success": "Hvala! Vaša poruka je poslana - javit ćemo vam se uskoro.",
     "error": "Nešto je pošlo po zlu. Pokušajte ponovno ili nam pošaljite email izravno.",
@@ -146,5 +147,19 @@
       "addMore": "Ako želite nešto dodati, jednostavno odgovorite na ovaj e-mail.",
       "signoff": "Lijep pozdrav,"
     }
+  },
+  "cookies": {
+    "label": "Privola za kolačiće",
+    "text": "Kolačići nam omogućuju prikaz karte kako biste nas lako pronašli i pomažu nam poboljšati stranicu za naše posjetitelje.",
+    "accept": "Prihvati",
+    "decline": "Odbij",
+    "privacy": "Pravila privatnosti",
+    "settings": "Postavke kolačića",
+    "mapPlaceholder": "Karta se prikazuje nakon što prihvatite kolačiće."
+  },
+  "notFound": {
+    "title": "Stranica nije pronađena",
+    "text": "Nažalost, ova stranica ne postoji ili je premještena.",
+    "home": "Natrag na početnu"
   }
 }

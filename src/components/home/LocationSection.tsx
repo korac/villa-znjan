@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { buttonClasses } from "@/components/Button";
 import { destinations } from "@/content/location";
 import { ArrowUpRight } from "@/components/ArrowUpRight";
+import { ConsentMap } from "@/components/home/ConsentMap";
 import { embedUrl, placeUrl } from "@/lib/googleMaps";
 import type { Locale } from "@/i18n/routing";
 
@@ -72,14 +73,8 @@ export function LocationSection() {
               replaced element, so with `width: auto` it falls back to its
               intrinsic 300px instead of stretching between left and right. */}
           <div className="lg:absolute lg:inset-y-0 lg:left-[calc(50%+2rem)] lg:right-0">
-            <iframe
-              src={embedUrl(locale)}
-              title={t("mapLabel")}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-              className="aspect-[4/3] h-full w-full border-0 bg-surface-deep lg:aspect-auto dark:brightness-[0.6]"
-            />
+            {/* Loads only after cookie consent; a placeholder otherwise. */}
+            <ConsentMap src={embedUrl(locale)} title={t("mapLabel")} />
           </div>
         </div>
       </Container>

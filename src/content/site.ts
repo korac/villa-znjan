@@ -26,6 +26,12 @@ export const site = {
    * See `src/lib/googleMaps.ts` for the URLs built from it.
    */
   placeId: "ChIJzUPXTc1fNRMRrKkZirclfRg",
+  /**
+   * House times, used in structured data for search engines. The FAQ states
+   * the same times in its own copy (src/content/faq.ts) - keep them in sync.
+   */
+  checkInTime: "14:00",
+  checkOutTime: "10:00",
   social: {
     instagram: "https://instagram.com/",
   },

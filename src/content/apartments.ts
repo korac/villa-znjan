@@ -257,11 +257,15 @@ export const apartments: Apartment[] = [
       "hairDryer",
     ],
     images: [
+      "/apartments/oleander/a3-1.jpg",
+      "/apartments/oleander/a3-2.jpg",
+      "/apartments/oleander/a3-4.jpg",
       "/apartments/oleander/0G7A1682.jpg",
-      "/apartments/oleander/0G7A1687.jpg",
-      "/apartments/oleander/0G7A1694.jpg",
-      "/apartments/oleander/0G7A1697.jpg",
       "/apartments/oleander/0G7A1705.jpg",
+      "/apartments/oleander/a3-3.jpg",
+      "/apartments/oleander/0G7A1687.jpg",
+      "/apartments/oleander/0G7A1697.jpg",
+      "/apartments/oleander/0G7A1694.jpg",
     ],
     content: {
       en: {

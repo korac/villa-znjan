@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { routing, type Locale } from "@/i18n/routing";
 import "../globals.css";
+import { IS_PRODUCTION, SITE_URL } from "@/lib/seo";
 
 // Serif display face for headings (latin-ext covers č/ž/š/ć/đ and German umlauts)
 const cormorant = Cormorant_Garamond({
@@ -42,8 +43,14 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
+    // Resolves every relative canonical, alternate and share-image URL
+    // against the one public address of the site.
+    metadataBase: new URL(SITE_URL),
     title: t("title"),
     description: t("description"),
+    // Belt and braces with robots.txt: a noindex tag on every page outside
+    // production, in case a crawler reaches beta through a link anyway.
+    ...(IS_PRODUCTION ? {} : { robots: { index: false, follow: false } }),
   };
 }
 

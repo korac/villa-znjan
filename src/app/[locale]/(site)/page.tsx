@@ -10,6 +10,38 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { getApartmentsOrdered } from "@/content/apartments";
 import type { Locale } from "@/i18n/routing";
+import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
+import { lodgingBusiness, faqPage } from "@/lib/structuredData";
+import { villaSections } from "@/content/villa";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return pageMetadata({
+    locale,
+    path: "/",
+    title: t("title"),
+    description: t("description"),
+  });
+}
+
+/** House-wide facilities named in the villa's structured data. */
+const HOUSE_AMENITIES = [
+  "pool",
+  "sauna",
+  "gym",
+  "outdoorGrill",
+  "parking",
+  "wifi",
+  "airConditioning",
+  "elevator",
+] as const;
 
 export default async function HomePage({
   params,
@@ -19,10 +51,23 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home");
+  const tAll = await getTranslations();
   const apartments = getApartmentsOrdered();
+  const breakfast = villaSections.find((s) => s.key === "breakfast");
 
   return (
     <main>
+      <JsonLd
+        data={lodgingBusiness({
+          locale,
+          description: tAll("meta.description"),
+          amenities: [
+            ...(breakfast ? [breakfast.content[locale].label] : []),
+            ...HOUSE_AMENITIES.map((key) => tAll(`amenities.${key}`)),
+          ],
+        })}
+      />
+      <JsonLd data={faqPage(locale)} />
       <Hero />
 
       {/* Intro */}

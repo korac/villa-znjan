@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/cn";
+import { track } from "@/lib/analytics";
 
 export function LocaleSwitcher() {
   const active = useLocale();
@@ -22,6 +23,11 @@ export function LocaleSwitcher() {
             href={pathname}
             locale={locale}
             aria-current={locale === active ? "true" : undefined}
+            onClick={() => {
+              if (locale !== active) {
+                track("locale_switched", { from: active, to: locale });
+              }
+            }}
             className={cn(
               "transition-colors",
               locale === active
