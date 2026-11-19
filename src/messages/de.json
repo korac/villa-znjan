@@ -146,5 +146,14 @@
       "addMore": "Möchten Sie noch etwas ergänzen? Antworten Sie einfach auf diese E-Mail.",
       "signoff": "Viele Grüße"
     }
+  },
+  "cookies": {
+    "label": "Cookie-Einwilligung",
+    "text": "Cookies ermöglichen eine Karte, damit Sie uns leicht finden, und helfen uns, die Website für unsere Besucher zu verbessern.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "privacy": "Datenschutz",
+    "settings": "Cookie-Einstellungen",
+    "mapPlaceholder": "Die Karte wird angezeigt, sobald Sie Cookies akzeptieren."
   }
 }

@@ -146,5 +146,14 @@
       "addMore": "Ako želite nešto dodati, jednostavno odgovorite na ovaj e-mail.",
       "signoff": "Lijep pozdrav,"
     }
+  },
+  "cookies": {
+    "label": "Privola za kolačiće",
+    "text": "Kolačići nam omogućuju prikaz karte kako biste nas lako pronašli i pomažu nam poboljšati stranicu za naše posjetitelje.",
+    "accept": "Prihvati",
+    "decline": "Odbij",
+    "privacy": "Pravila privatnosti",
+    "settings": "Postavke kolačića",
+    "mapPlaceholder": "Karta se prikazuje nakon što prihvatite kolačiće."
   }
 }

@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/Container";
 import { site } from "@/content/site";
 import { AddressLink } from "@/components/AddressLink";
+import { CookieSettingsLink } from "@/components/CookieSettingsLink";
 
 const navItems = [
   { key: "apartments", href: "/#apartments" },
@@ -70,6 +71,7 @@ export function Footer() {
           <span>
             © {year} {site.name}. {t("footer.rights")}
           </span>
+          <CookieSettingsLink />
         </Container>
       </div>
     </footer>

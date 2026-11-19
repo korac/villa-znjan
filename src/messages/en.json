@@ -146,5 +146,14 @@
       "addMore": "If you'd like to add anything, just reply to this email.",
       "signoff": "Kind regards,"
     }
+  },
+  "cookies": {
+    "label": "Cookie consent",
+    "text": "Cookies let us show a map so you can find us easily, and help us improve the site for our visitors.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "privacy": "Privacy policy",
+    "settings": "Cookie settings",
+    "mapPlaceholder": "The map loads once you accept cookies."
   }
 }
