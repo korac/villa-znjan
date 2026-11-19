@@ -7,6 +7,7 @@ import { ContactSection } from "@/components/ContactSection";
 import { VillaFeature } from "@/components/villa/VillaFeature";
 import { getVillaSectionsOrdered, villaAmenities } from "@/content/villa";
 import { routing, type Locale } from "@/i18n/routing";
+import { pageMetadata } from "@/lib/seo";
 
 // Owner to supply a dedicated villa exterior shot; using an existing hero for now.
 const HERO_IMAGE = "/hero3.jpg";
@@ -22,10 +23,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "villa" });
-  return {
+  return pageMetadata({
+    locale,
+    path: "/villa",
     title: `${t("hero.heading")} - Villa Žnjan`,
     description: t("hero.subheading"),
-  };
+  });
 }
 
 export default async function VillaPage({

@@ -4,6 +4,7 @@ import { Fragment, type ReactNode } from "react";
 import { routing, type Locale } from "@/i18n/routing";
 import { Container } from "@/components/Container";
 import { privacy, PRIVACY_UPDATED, type PrivacyBlock } from "@/content/privacy";
+import { pageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -15,7 +16,12 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return { title: `${privacy[locale].title} - Villa Žnjan` };
+  return pageMetadata({
+    locale,
+    path: "/privacy",
+    title: `${privacy[locale].title} - Villa Žnjan`,
+    description: privacy[locale].intro,
+  });
 }
 
 const linkClass =
